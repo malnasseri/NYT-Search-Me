@@ -68,8 +68,9 @@ width: 32%;
 	margin-bottom: 15px;
 	min-height: 480px;
 }
-.article h5 {
+.article h5 , .well h5 {
 	padding-top: 15px;
+	color: black;
 }
 .articles-panel {
 	width: 75%;
