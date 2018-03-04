@@ -70,8 +70,10 @@ width: 32%;
 }
 #snippet {
 	margin:0 auto !important;
+	padding: 0 !important;
 }
 #date {
+	padding: 0 !important;
 	margin:0 auto !important;
 }
 .article h5 , .well h5 {
