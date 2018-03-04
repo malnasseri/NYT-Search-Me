@@ -27,7 +27,7 @@ class Jumbotron extends Component {
         return(
             <div className="jumbotron">
                 <h1 className="text-center">
-                    <img src="../img/Newspaper.png"/>
+                   
                     New York Times Article Scrubber
                 </h1>
                 <p className="text-center">

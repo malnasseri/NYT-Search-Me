@@ -35,12 +35,15 @@ const helpers = {
       if (res.data.response.docs[0]) {
         let news = []
         // Iterate through docs array and get only 5 news
-         for(let i = 0; i < 5; i++){
+         for(let i = 0; i < 10; i++){
             const snippet = res.data.response.docs[i].snippet;
             const headline = res.data.response.docs[i].headline.main;
             const url = res.data.response.docs[i].web_url;
             const date = res.data.response.docs[i].pub_date; 
-            news.push({snippet: snippet, headline: headline, url: url, date: date});
+            const byline = res.data.response.docs[i].byline.original;
+            const image = res.data.response.docs[i].multimedia[18].url;
+            console.log(res.data.response.docs[i]);
+            news.push({snippet: snippet, headline: headline, url: url, date: date, byline:byline, image:image});
          }
           return (news);
       }
@@ -48,6 +51,7 @@ const helpers = {
       return (false);
     });
   },
+
 
   // This function hits our own server to retrieve the record of query results
   GetSavedNews: function() {

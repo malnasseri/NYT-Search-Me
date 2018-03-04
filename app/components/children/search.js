@@ -113,13 +113,13 @@ class Search extends Component {
         return (
             <div>
                 <div className="col-md-10 col-md-offset-1">
-                    <div className="panel panel-default">
+                    <div className="panel panel-default search-panel">
                         <div className="panel-heading text-center"><h5>Search</h5></div>
                         <div className="panel-body">
                             <form className="form-horizontal">
                                 <fieldset>
                                     <div className="form-group">
-                                        <label className="col-md-2 col-md-offset-1 control-label text-danger" id="topicText">Topic</label>
+                                        <label className="col-md-2 control-label text-danger" id="topicText">Topic</label>
                                         <div className="col-md-6">
                                             <input type="text"
                                             value={this.state.topic} 
@@ -130,7 +130,7 @@ class Search extends Component {
                                         </div>                                             
                                     </div>
                                     <div className="form-group"> 
-                                        <label className="col-md-2 col-md-offset-1 control-label text-danger" id="startYearText">Start Year</label>
+                                        <label className="col-md-2 control-label text-danger" id="startYearText">Start Year</label>
                                         <div className="col-md-2">
                                             <input type="text"
                                             value={this.state.startYear} 

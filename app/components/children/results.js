@@ -42,27 +42,33 @@ class Results extends Component {
         // render its content whenever there are some results came from its parent.
         if(this.props.results[0]){
         return(
-        <div className="panel panel-default">
+        <div className="panel panel-default articles-panel">
                 <div className="panel-heading text-center"><h5>Results</h5></div>
                 <div className="panel-body">
                     {/*use a map function to loop through an array in JSX  */}
                     {this.props.results.map(function(search, i) {
                         if (i % 2 == 0){
                             return (
-                                <blockquote key={i}>
+                                <div className="article" key={i}>
                                 <h5>{search.headline}</h5>
                                 <p>{search.snippet}</p>
+                                <small><strong><p>{search.byline}</p></strong></small>
                                 <small><a href={search.url}>Link </a><cite title="Source Title"> {search.date}</cite></small>
                                 <button className="btn btn-primary" onClick={this.handleClick} id={i}>Save</button>
-                                </blockquote>
+                                <img src={"https://static01.nyt.com/" + search.image}></img>
+                                </div>
+
                         )} else{
                             return (
-                                <blockquote className="blockquote-reverse" key={i}>
+                                <div  className="article" key={i}>
                                 <h5>{search.headline}</h5>
                                 <p>{search.snippet}</p>
+                                <p>{search.byline}</p>
+                                 
                                 <small><a href={search.url}>Link </a><cite title="Source Title">{search.date}</cite></small>
                                 <button className="btn btn-primary" onClick={this.handleClick} id={i}>Save</button>
-                                </blockquote>
+                                <img src={"https://static01.nyt.com/" + search.image}></img>
+                                </div>
                         )}
                     },this)}
                 </div>
@@ -73,7 +79,7 @@ class Results extends Component {
 
     render() {
         return(
-             <div className="col-md-10 col-md-offset-1">
+             <div>
             {this.renderResults()}
             </div>
         )
