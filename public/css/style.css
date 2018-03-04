@@ -39,6 +39,9 @@ img {
 .well .close {
 	margin-top: -10px;
 }
+.well img {
+	margin-top: 10px;
+}
 .well-container {
 	max-width: 95%;
 	padding-left: 40px;
