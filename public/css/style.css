@@ -68,6 +68,9 @@ width: 32%;
 	margin-bottom: 15px;
 	min-height: 480px;
 }
+#date {
+	margin:0 auto !important;
+}
 .article h5 , .well h5 {
 	padding-top: 15px;
 	color: black;
