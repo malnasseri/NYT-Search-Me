@@ -168,7 +168,7 @@ class SavedNews extends Component {
         // iterate through the state
         return this.state.savedNews.map((news, i)=>{
                 return (
-                  <div className="well-container">
+                 
                     <div className="well" key={news._id}>
                         <button type="button" 
                         className="close" 
@@ -201,7 +201,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
-                    </div>
+                    
                   </div>
                 )
             })
@@ -209,7 +209,7 @@ class SavedNews extends Component {
     render() {
         return(
                 <div>
-                    <div>
+                    <div className="well-container">
                         <div className="panel panel-default">
                                 <div className="panel-heading text-center"><h5>Saved News</h5></div>
                                 <div className="panel-body">
