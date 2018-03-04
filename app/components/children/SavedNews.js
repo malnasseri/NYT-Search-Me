@@ -149,7 +149,7 @@ class SavedNews extends Component {
                                 className="close" 
                                 data-toggle="tooltip" 
                                 data-placement="top" 
-                                title="Remove from save"
+                                title="Remove"
                                 onClick={()=>this.handleDeleteNote(note._id)}
                                 >
                                 <span>&times;</span>
@@ -174,7 +174,7 @@ class SavedNews extends Component {
                         className="close" 
                         data-toggle="tooltip" 
                         data-placement="top" 
-                        title="Remove from save"
+                        title="Delete"
                         onClick={()=>this.handleDeleteClick(news._id)}
                         >
                             <span>&times;</span>
