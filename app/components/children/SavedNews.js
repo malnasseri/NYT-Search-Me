@@ -209,7 +209,7 @@ class SavedNews extends Component {
     render() {
         return(
                 <div>
-                    <div className="col-md-10 col-md-offset-1">
+                    <div>
                         <div className="panel panel-default">
                                 <div className="panel-heading text-center"><h5>Saved News</h5></div>
                                 <div className="panel-body">
