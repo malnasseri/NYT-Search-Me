@@ -10,9 +10,11 @@ img {
 .btn-lg {
     margin: 5px;
 }
-
+.note-p {
+	font-size: 14px;
+}
 .label-success {
-	font-size: 12px !important;
+	font-size: 14px;
     /*margin-right: 0px; */
 }
 
