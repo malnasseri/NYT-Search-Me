@@ -37,7 +37,8 @@ img {
 
 }
 .well-container {
-	max-width: 80%;
+	max-width: 100%;
+	text-align: center;
 }
 .well {
 width: 32%;
