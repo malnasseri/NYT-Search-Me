@@ -178,22 +178,22 @@ class SavedNews extends Component {
                         >
                             <span>&times;</span>
                         </button>
-                        <h5>
+                        <a target="_blank" href={news.url}><h5>
                             <span className="label label-default">{i+1}</span>
                             {news.headline}
-                        </h5>
+                        </h5></a>
                         <p>{news.snippet}</p>
                          <small><strong><p>{news.byline}</p></strong></small>
                         <div className="text-right">
                             <small>
-                                <a href={news.url}>Link </a><cite title="Source Title">{news.date}</cite>
+                                <cite title="Source Title">{news.date}</cite>
                             </small>
                             <img src={"https://static01.nyt.com/" + news.image}></img>
                         </div>
                         {this.renderSavedNotes(i)}
                         <p className="text-right">
                             <button 
-                            className="btn btn-info btn-sm"
+                            className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes

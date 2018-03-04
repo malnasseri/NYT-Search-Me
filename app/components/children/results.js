@@ -50,24 +50,26 @@ class Results extends Component {
                         if (i % 2 == 0){
                             return (
                                 <div className="article" key={i}>
-                                <h5>{search.headline}</h5>
+                                <img src={"https://static01.nyt.com/" + search.image}></img>
+                                <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p>{search.snippet}</p>
                                 <small><strong><p>{search.byline}</p></strong></small>
-                                <small><a href={search.url}>Link </a><cite title="Source Title"> {search.date}</cite></small>
-                                <button className="btn btn-primary" onClick={this.handleClick} id={i}>Save</button>
-                                <img src={"https://static01.nyt.com/" + search.image}></img>
+                                <small><cite title="Source Title"> {search.date}</cite></small>
+                                <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
+                                
                                 </div>
 
                         )} else{
                             return (
                                 <div  className="article" key={i}>
-                                <h5>{search.headline}</h5>
-                                <p>{search.snippet}</p>
-                                <p>{search.byline}</p>
-                                 
-                                <small><a href={search.url}>Link </a><cite title="Source Title">{search.date}</cite></small>
-                                <button className="btn btn-primary" onClick={this.handleClick} id={i}>Save</button>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
+                                <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
+                                <p>{search.snippet}</p>
+                                <small><strong><p>{search.byline}</p></strong></small>
+                                 
+                                <small><cite title="Source Title">{search.date}</cite></small>
+                                <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
+                                
                                 </div>
                         )}
                     },this)}
