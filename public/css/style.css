@@ -44,7 +44,10 @@ img {
 	background-color: lightgray;
 	margin-left: 5px;
 	margin-bottom: 15px;
-	height: 480px;
+	min-height: 480px;
+}
+.article h5 {
+	padding-top: 15px;
 }
 .articles-panel {
 	width: 75%;

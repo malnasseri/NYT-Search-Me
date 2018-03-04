@@ -178,6 +178,7 @@ class SavedNews extends Component {
                         >
                             <span>&times;</span>
                         </button>
+                        <img src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
                             <span className="label label-default">{i+1}</span>
                             {news.headline}
@@ -188,7 +189,7 @@ class SavedNews extends Component {
                             <small>
                                 <cite title="Source Title">{news.date}</cite>
                             </small>
-                            <img src={"https://static01.nyt.com/" + news.image}></img>
+                            
                         </div>
                         {this.renderSavedNotes(i)}
                         <p className="text-right">

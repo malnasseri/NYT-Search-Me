@@ -54,7 +54,7 @@ class Results extends Component {
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p>{search.snippet}</p>
                                 <small><strong><p>{search.byline}</p></strong></small>
-                                <small><cite title="Source Title"> {search.date}</cite></small>
+                                <small><cite title="Source Title"> {search.date.substring(0, 10)}</cite></small>
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>
@@ -67,7 +67,7 @@ class Results extends Component {
                                 <p>{search.snippet}</p>
                                 <small><strong><p>{search.byline}</p></strong></small>
                                  
-                                <small><cite title="Source Title">{search.date}</cite></small>
+                                <small><cite title="Source Title">{search.date.substring(0, 10)}</cite></small>
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>
