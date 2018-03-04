@@ -52,6 +52,14 @@ img {
 	padding-left: 50px;
 	text-align: center;
 }
+.modal.show{
+-webkit-transition:opacity .3s linear, top .3s ease-out;
+-moz-transition:opacity .3s linear, top .3s ease-out;
+-ms-transition:opacity .3s linear, top .3s ease-out;
+-o-transition:opacity .3s linear, top .3s ease-out;
+transition:opacity .3s linear, top .3s ease-out;
+top:15%;
+}
 .well {
 width: 32%;
 	float: left;
