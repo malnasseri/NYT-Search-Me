@@ -37,13 +37,13 @@ img {
 
 }
 .well {
-width: 32%;
+width: 38%;
 	float: left;
 	text-align: center;
 	padding: 15px;
 	background-color: lightgray;
 	margin-left: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	min-height: 480px;
 }
 .article {
