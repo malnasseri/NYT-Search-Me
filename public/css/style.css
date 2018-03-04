@@ -36,6 +36,9 @@ img {
 	text-align: center;
 
 }
+.well-container {
+	max-width: 80%;
+}
 .well {
 width: 32%;
 	float: left;
