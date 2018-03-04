@@ -186,7 +186,7 @@ class SavedNews extends Component {
                         </h5></a>
                         <p>{news.snippet}</p>
                          <small><strong><p>{news.byline}</p></strong></small>
-                        <div className="text-right">
+                        <div className="text">
                             <small>
                                 <cite title="Source Title">{news.date.substring(0, 10)}</cite>
                             </small>
