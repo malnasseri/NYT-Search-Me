@@ -37,7 +37,8 @@ img {
 
 }
 .well-container {
-	max-width: 90%;
+	max-width: 95%;
+	padding-left: 20px;
 	text-align: center;
 }
 .well {
