@@ -36,7 +36,17 @@ img {
 	
 
 }
-.article, .well {
+.well {
+width: 32%;
+	float: left;
+	text-align: center;
+	padding: 15px;
+	background-color: lightgray;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	min-height: 480px;
+}
+.article {
 	width: 49%;
 	float: left;
 	text-align: center;
