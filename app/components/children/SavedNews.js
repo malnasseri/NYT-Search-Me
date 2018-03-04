@@ -188,7 +188,7 @@ class SavedNews extends Component {
                          <small><strong><p>{news.byline}</p></strong></small>
                         <div className="text-right">
                             <small>
-                                <cite title="Source Title">{news.date}</cite>
+                                <cite title="Source Title">{news.date.substring(0, 10)}</cite>
                             </small>
                             
                         </div>
