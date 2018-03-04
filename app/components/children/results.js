@@ -25,10 +25,12 @@ class Results extends Component {
         e.preventDefault();
         //grab number to get news from props then post to the server
         const newsNum = e.target.id;
-        
-        // for a UX purpose disable button after click save.
-        $("#"+newsNum).text("Saved!").addClass("disabled");
+        // var article = $('.article');
 
+        // for a UX purpose disable button after click save.
+        // $("#"+newsNum).text("Saved!").addClass("disabled");
+            $("#"+newsNum).hide(1000);
+        
             // Run the query for the "POST" to the server
             helpers.postNews(this.props.results[newsNum])
             .then(function(data) {
@@ -49,7 +51,7 @@ class Results extends Component {
                     {this.props.results.map(function(search, i) {
                         if (i % 2 == 0){
                             return (
-                                <div className="article" key={i}>
+                                <div className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p>{search.snippet}</p>
@@ -61,7 +63,7 @@ class Results extends Component {
 
                         )} else{
                             return (
-                                <div  className="article" key={i}>
+                                <div  className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p>{search.snippet}</p>

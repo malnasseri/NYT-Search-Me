@@ -58,7 +58,7 @@ class SavedNews extends Component {
         event.preventDefault();
         //send id to helper and delete from database then re-render
         helpers.deleteNotes(id).then((data)=>{
-            console.log(`Deleteted Note `)
+            console.log(`Deleted Note `)
             this.getSavedNews()}
         );
     }
