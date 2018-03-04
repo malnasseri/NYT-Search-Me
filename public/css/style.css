@@ -68,6 +68,10 @@ width: 32%;
 	margin-bottom: 15px;
 	min-height: 480px;
 }
+#byline {
+	margin:0 auto !important;
+	padding: 0 !important;
+}
 #snippet {
 	margin:0 auto !important;
 	padding: 0 !important;

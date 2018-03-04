@@ -185,7 +185,7 @@ class SavedNews extends Component {
                             {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                         <small><strong><p>{news.byline}</p></strong></small>
+                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                         <div className="text">
                             <small>
                                 <strong>
