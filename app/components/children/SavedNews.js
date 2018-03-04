@@ -168,7 +168,7 @@ class SavedNews extends Component {
         // iterate through the state
         return this.state.savedNews.map((news, i)=>{
                 return (
-                    <div className="well well-lg" key={news._id}>
+                    <div className="well" key={news._id}>
                         <button type="button" 
                         className="close" 
                         data-toggle="tooltip" 
