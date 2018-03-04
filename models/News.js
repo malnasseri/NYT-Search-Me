@@ -15,6 +15,12 @@ const NewsSchema = new Schema({
     date: {
         type: String
     }, 
+    byline: {
+        type: String
+    },
+    image: {
+        type: String
+    },
     note: [{
     type: Schema.Types.ObjectId,
     ref: "Note"
