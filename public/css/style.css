@@ -12,7 +12,7 @@ img {
 }
 
 .label-success {
-	font-size: 14px;
+	font-size: 12px !important;
     /*margin-right: 0px; */
 }
 
