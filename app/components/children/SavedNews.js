@@ -183,10 +183,12 @@ class SavedNews extends Component {
                             {news.headline}
                         </h5>
                         <p>{news.snippet}</p>
+                         <small><strong><p>{search.byline}</p></strong></small>
                         <div className="text-right">
                             <small>
                                 <a href={news.url}>Link </a><cite title="Source Title">{news.date}</cite>
                             </small>
+                            <img src={"https://static01.nyt.com/" + search.image}></img>
                         </div>
                         {this.renderSavedNotes(i)}
                         <p className="text-right">
