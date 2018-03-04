@@ -68,6 +68,9 @@ width: 32%;
 	margin-bottom: 15px;
 	min-height: 480px;
 }
+#snippet {
+	margin:0 auto !important;
+}
 #date {
 	margin:0 auto !important;
 }

@@ -184,11 +184,13 @@ class SavedNews extends Component {
                             <span className="label label-default">{i+1}</span>
                             {news.headline}
                         </h5></a>
-                        <p>{news.snippet}</p>
+                        <p id="snippet">{news.snippet}</p>
                          <small><strong><p>{news.byline}</p></strong></small>
                         <div className="text">
                             <small>
-                                <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
+                                <strong>
+                                    <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
+                                </strong>
                             </small>
                             
                         </div>
