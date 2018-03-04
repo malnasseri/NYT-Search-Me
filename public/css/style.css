@@ -12,7 +12,8 @@ img {
 }
 
 .label-success {
-    margin-right: 10px; 
+	font-size: 14px;
+    /*margin-right: 0px; */
 }
 
 .jumbotron h1 {
