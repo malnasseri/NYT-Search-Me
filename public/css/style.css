@@ -33,7 +33,7 @@ img {
 .panel {
 	float: left;
 	/*max-width: 70%;*/
-	
+	text-align: center;
 
 }
 .well {
