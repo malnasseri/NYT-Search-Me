@@ -87,14 +87,10 @@ class MyInput extends Component {
             
             newsID:""
         }
-        this.getSavedNews = this.getSavedNews.bind(this);
-        this.renderSavedNews = this.renderSavedNews.bind(this);
-        this.handleDeleteClick = this.handleDeleteClick.bind(this);
-        this.handleAddNotes = this.handleAddNotes.bind(this);
-        this.renderNotesModal = this.renderNotesModal.bind(this);
+        
         this.handleNoteInputChange = this.handleNoteInputChange.bind(this);
         this.handleSaveNote = this.handleSaveNote.bind(this);
-        this.renderSavedNotes = this.renderSavedNotes.bind(this);
+       
     }
  
   changeText(e) {
