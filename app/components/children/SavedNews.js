@@ -82,7 +82,7 @@ class SavedNews extends Component {
     content: "input",
     buttons: {
             cancel: true,
-            confirm: "Submit"
+            confirm: this.handleSaveNote
         }
     }).then( val => {
         if(val) {
