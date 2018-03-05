@@ -76,7 +76,7 @@ img {
 	margin-top: -10px;
 }
 li.list-group-item {
-	padding-bottom: 0 !important;
+	padding-bottom: 10px !important;
 }
 .label-success {
 	font-size: 14px;
