@@ -88,8 +88,7 @@ class MyInput extends Component {
             newsID:""
         }
         
-        this.handleNoteInputChange = this.handleNoteInputChange.bind(this);
-        this.handleSaveNote = this.handleSaveNote.bind(this);
+       
        
     }
  
