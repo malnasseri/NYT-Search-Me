@@ -87,7 +87,7 @@ class SavedNews extends Component {
     }).then( val => {
         if(val) {
             this.setState({noteInput: val})
-            console.log(this.state.val) 
+            console.log(this.state.noteInput) 
         }
     });
 
