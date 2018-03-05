@@ -83,53 +83,47 @@ class MyInput extends Component {
  
     this.state = {
       noteInput: DEFAULT_INPUT_TEXT,
-   savedNews:[],
-            
-            newsID:""
-        }
-        
-       
-       
-    }
- 
-  changeText(e) {
-    let noteInput = e.target.value;
- 
-    this.setState({
-      noteInput,
-    });
- 
-    /*
-     * This will update the value that the confirm
-     * button resolves to:
-     */
-    swal.setActionValue(noteInput);
+    };
   }
+ 
+  // changeText(e) {
+  //   let text = e.target.value;
+ 
+  //   this.setState({
+  //     text,
+  //   });
+ 
+    
+  //   swal.setActionValue(text);
+  // }
  
   render() {
     return (
       <div>
-        <input 
-            value={this.state.noteInput}
-            className="form-control input-lg" 
-            id="focusedInput" 
-            type="text"
-            onChange={this.handleNoteInputChange} 
-            />
-        <button 
-            type="button" 
-            className="btn btn-default" 
-            data-dismiss="swal-modal"
-            onClick={()=>this.setState({newsID: ""})}
-            >Close
-        </button>
-        <button 
-            type="button" 
-            className="btn btn-primary"
-            onClick={this.handleSaveNote}
-            >Save
-        </button>
-      </div>
+      <div className="modal-body">
+                            <div className="form-group">
+                                <label className="control-label">Type here.</label>
+                                <input 
+                                value={this.state.noteInput}
+                                className="form-control input-lg" 
+                                id="focusedInput" 
+                                type="text"
+                                onChange={this.handleNoteInputChange.bind(this)} 
+                                />
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" 
+                            className="btn btn-default" 
+                            data-dismiss="modal"
+                            onClick={()=>this.setState({newsID: ""})}
+                            >Close</button>
+                            <button type="button" 
+                            className="btn btn-primary"
+                            onClick={this.handleSaveNote}
+                            >Save</button>
+                        </div>
+                        </div>
     )
   }
 }
@@ -152,9 +146,9 @@ swal({
     },
   },
 })
-// .then((value) => {
-//   swal(`You typed: ${value}`);
-// });
+.then((value) => {
+  swal(`You typed: ${value}`);
+});
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
