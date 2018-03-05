@@ -76,6 +76,7 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         // toggle modal to input notes
+        let noteInput = "";
         swal({
     title:"confirmation",
     text: "Are You Sure?",
@@ -84,16 +85,23 @@ class SavedNews extends Component {
             cancel: true,
             confirm: "Submit"
         }
-    }).then( val => {
-        if(val) {
-            this.setState({noteInput: val})
-            console.log(this.state.noteInput) 
+    }).then( noteInput => {
+        if(noteInput) {
+            swal({
+                title: "Thanks!",
+                text: "You typed: " + noteInput,
+                icon: "success"
+            });
         }
     });
 
 
         // set newsId state to whateever id in the add notes buttons clicked
-        this.setState({newsID: id})
+        this.setState({
+            newsID: id,
+            noteInput: noteInput
+
+        })
 
     }
 
