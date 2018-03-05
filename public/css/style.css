@@ -136,7 +136,7 @@ li .close {
 
 }
 li .close span {
-	margin-top: 5px;
+	margin-top: 15px !important;
 }
 .modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
