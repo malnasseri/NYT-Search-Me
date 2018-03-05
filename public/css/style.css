@@ -127,6 +127,9 @@ img {
 	padding-left: 50px;
 	text-align: center;
 }
+.save-btn {
+	margin-top: 0;
+}
 .modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
 -moz-transition:opacity .3s linear, top .3s ease-out;
