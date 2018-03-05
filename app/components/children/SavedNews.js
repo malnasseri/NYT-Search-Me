@@ -15,7 +15,6 @@ class MyInput extends Component {
  
     this.state = {
       noteInput: "",
-      newsID: ""
     };
   }
  
@@ -44,7 +43,7 @@ class MyInput extends Component {
       />
       <button type="button" 
                             className="btn btn-default" 
-                            data-dismiss="swal-modal"
+                            data-dismiss="modal"
                             onClick={()=>this.setState({newsID: ""})}
                             >Close</button>
                             <button type="button" 
@@ -132,13 +131,15 @@ class SavedNews extends Component {
         swal({
   text: "Write something here:",
   content: el,
-  
+  buttons: {
+    confirm: {
       /*
        * We need to initialize the value of the button to
        * an empty string instead of "true":
        */
-      value: noteInput,
-   
+      value: DEFAULT_INPUT_TEXT,
+    },
+  },
 })
 .then((value) => {
   swal(`You typed: ${value}`);
@@ -173,10 +174,10 @@ class SavedNews extends Component {
         });
     }
 
-    handleNoteInputChange(event) {
-        // set note input whenever users type
-        this.setState({ noteInput: event.target.value});
-    }
+    // handleNoteInputChange(event) {
+    //     // set note input whenever users type
+    //     this.setState({ noteInput: event.target.value});
+    // }
 
     renderNotesModal(){
         return(
