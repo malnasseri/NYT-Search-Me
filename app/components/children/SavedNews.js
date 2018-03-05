@@ -104,7 +104,7 @@ class SavedNews extends Component {
 
     renderNotesModal(){
         return(
-                <div className="modal">
+                <div className="modal md-modal md-effect-11" id="modal-11">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
