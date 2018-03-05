@@ -289,6 +289,8 @@ fieldset {
 	width: 350px;
 	float: none;
 	margin: 0 auto !important;
+	margin-bottom: 5px;
+	margin-left: -3px;
 }
 .saved-articles {
 	margin-left: -25px;
