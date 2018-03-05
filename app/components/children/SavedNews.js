@@ -83,9 +83,19 @@ class MyInput extends Component {
  
     this.state = {
       noteInput: DEFAULT_INPUT_TEXT,
-      newsID: ""
-    };
-  }
+   savedNews:[],
+            
+            newsID:""
+        }
+        this.getSavedNews = this.getSavedNews.bind(this);
+        this.renderSavedNews = this.renderSavedNews.bind(this);
+        this.handleDeleteClick = this.handleDeleteClick.bind(this);
+        this.handleAddNotes = this.handleAddNotes.bind(this);
+        this.renderNotesModal = this.renderNotesModal.bind(this);
+        this.handleNoteInputChange = this.handleNoteInputChange.bind(this);
+        this.handleSaveNote = this.handleSaveNote.bind(this);
+        this.renderSavedNotes = this.renderSavedNotes.bind(this);
+    }
  
   changeText(e) {
     let noteInput = e.target.value;
@@ -109,7 +119,7 @@ class MyInput extends Component {
             className="form-control input-lg" 
             id="focusedInput" 
             type="text"
-            onChange={this.changeText} 
+            onChange={this.handleNoteInputChange} 
             />
         <button 
             type="button" 
