@@ -133,7 +133,10 @@ padding: none;
 }
 li .close {
 	margin-right: 4px;
-	margin-top: 6px;
+
+}
+li .close span {
+	margin-top: 5px;
 }
 .modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
