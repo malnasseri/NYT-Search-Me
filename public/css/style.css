@@ -131,6 +131,10 @@ img {
 margin-bottom: 10px;
 padding: none;
 }
+li .close {
+	margin-right: 4px;
+	margin-top: 6px;
+}
 .modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
 -moz-transition:opacity .3s linear, top .3s ease-out;
