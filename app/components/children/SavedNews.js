@@ -108,7 +108,7 @@ class MyInput extends Component {
             className="form-control input-lg" 
             id="focusedInput" 
             type="text"
-            onChange={this.handleNoteInputChange} 
+            onChange={this.changeText} 
             />
         <button 
             type="button" 
