@@ -73,6 +73,7 @@ img {
 .note-p {
 	font-size: 14px;
 	margin-bottom: 0;
+	margin-top: -10px;
 }
 .label-success {
 	font-size: 14px;
