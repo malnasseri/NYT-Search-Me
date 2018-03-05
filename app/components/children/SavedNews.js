@@ -104,7 +104,7 @@ class SavedNews extends Component {
 
     renderNotesModal(){
         return(
-                <div className="modal">
+                <div className="modal swal-modal">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -213,7 +213,7 @@ class SavedNews extends Component {
                 <div>
                     <div className="well-container">
                         <div className="panel panel-default">
-                                <div className="panel-heading text-center"><h5>Saved News</h5></div>
+                                <div className="panel-heading text-center"></div>
                                 <div className="panel-body">
                                     {/*We'll call render function here  */}
                                     {this.renderSavedNews()}
