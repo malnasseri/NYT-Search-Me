@@ -13,6 +13,7 @@ import ReactDOM from 'react-dom';
 
 
 class SavedNews extends Component {
+
     constructor(){
         super();
         this.state = {
@@ -75,80 +76,20 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         // toggle modal to input notes
-      const DEFAULT_INPUT_TEXT = "";
- 
-class MyInput extends Component {
-  constructor(props) {
-    super(props);
- 
-    this.state = {
-      noteInput: DEFAULT_INPUT_TEXT,
-    };
-  }
- 
-  // changeText(e) {
-  //   let text = e.target.value;
- 
-  //   this.setState({
-  //     text,
-  //   });
- 
-    
-  //   swal.setActionValue(text);
-  // }
- 
-  render() {
-    return (
-      <div>
-      <div className="modal-body">
-                            <div className="form-group">
-                                <label className="control-label">Type here.</label>
-                                <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.handleNoteInputChange.bind(this)} 
-                                />
-                            </div>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-                        </div>
-                        </div>
-    )
-  }
-}
- 
-// We want to retrieve MyInput as a pure DOM node: 
-let wrapper = document.createElement('div');
-ReactDOM.render(<MyInput />, wrapper);
-let el = wrapper.firstChild;
- 
-swal({
-  text: "Write something here:",
-  content: el,
-  buttons: {
-    confirm: {
-      /*
-       * We need to initialize the value of the button to
-       * an empty string instead of "true":
-       */
-      value: DEFAULT_INPUT_TEXT,
-    },
-  },
-})
-.then((value) => {
-  swal(`You typed: ${value}`);
-});
+        swal({
+    title:"confirmation",
+    text: "Are You Sure?",
+    content: "input",
+    buttons: {
+            cancel: true,
+            confirm: "Submit"
+        }
+    }).then( val => {
+        if(val) {
+            this.setState({noteInput: val}) 
+        }
+    });
+
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
@@ -183,6 +124,7 @@ swal({
         // set note input whenever users type
         this.setState({ noteInput: event.target.value});
     }
+
 
     renderNotesModal(){
         return(
@@ -307,6 +249,7 @@ swal({
         )
     }
 }
+
 
 //export class 
 export default SavedNews;
