@@ -130,7 +130,10 @@ li.list-group-item {
 	max-width: 95%;
 	padding-left: 50px;
 	text-align: center;
-	padding-bottom: 80px;
+	
+}
+.saved-articles {
+padding-bottom: 80px;
 }
 .save-btn {
 margin-bottom: 10px;

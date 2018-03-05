@@ -208,7 +208,7 @@ class SavedNews extends Component {
         return(
                 <div>
                     <div className="well-container">
-                        <div className="panel panel-default">
+                        <div className="panel panel-default saved-articles">
                                 <div className="panel-heading text-center"></div>
                                 <div className="panel-body">
                                     {/*We'll call render function here  */}
