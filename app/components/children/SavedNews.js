@@ -82,30 +82,48 @@ class MyInput extends Component {
     super(props);
  
     this.state = {
-      text: DEFAULT_INPUT_TEXT,
+      noteInput: DEFAULT_INPUT_TEXT,
     };
   }
  
   changeText(e) {
-    let text = e.target.value;
+    let noteInput = e.target.value;
  
     this.setState({
-      text,
+      noteInput,
     });
  
     /*
      * This will update the value that the confirm
      * button resolves to:
      */
-    swal.setActionValue(text);
+    swal.setActionValue(noteInput);
   }
  
   render() {
     return (
-      <input
-        value={this.state.text}
-        onChange={this.changeText.bind(this)}
-      />
+      <div>
+        <input 
+            value={this.state.noteInput}
+            className="form-control input-lg" 
+            id="focusedInput" 
+            type="text"
+            onChange={this.handleNoteInputChange} 
+            />
+        <button 
+            type="button" 
+            className="btn btn-default" 
+            data-dismiss="swal-modal"
+            onClick={()=>this.setState({newsID: ""})}
+            >Close
+        </button>
+        <button 
+            type="button" 
+            className="btn btn-primary"
+            onClick={this.handleSaveNote}
+            >Save
+        </button>
+      </div>
     )
   }
 }
@@ -128,9 +146,9 @@ swal({
     },
   },
 })
-.then((value) => {
-  swal(`You typed: ${value}`);
-});
+// .then((value) => {
+//   swal(`You typed: ${value}`);
+// });
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
