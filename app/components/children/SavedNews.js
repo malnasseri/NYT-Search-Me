@@ -4,6 +4,7 @@ import swal from 'sweetalert';
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
 
+
 import ReactDOM from 'react-dom';
  
 const DEFAULT_INPUT_TEXT = "";
@@ -34,14 +35,23 @@ class MyInput extends Component {
  
   render() {
     return (
-         <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.changeText.bind(this)} 
-                                />
-      
+        <div>
+                            
+                            
+      <input
+        value={this.state.noteInput}
+        onChange={this.changeText.bind(this)}
+      />
+      <button type="button" 
+                            className="btn btn-default" 
+                            data-dismiss="swal-modal"
+                            onClick={()=>this.setState({newsID: ""})}
+                            >Close</button>
+                            <button type="button" 
+                            className="btn btn-primary"
+                            onClick={this.handleSaveNote}
+                            >Save</button>
+      </div>
     )
   }
 }
@@ -51,6 +61,7 @@ let wrapper = document.createElement('div');
 ReactDOM.render(<MyInput />, wrapper);
 let el = wrapper.firstChild;
  
+
 
 
 
@@ -72,6 +83,7 @@ class SavedNews extends Component {
         this.handleSaveNote = this.handleSaveNote.bind(this);
         this.renderSavedNotes = this.renderSavedNotes.bind(this);
     }
+
     //After this component is loaded then call getSavedNews function
     componentDidMount() {
         this.getSavedNews();
@@ -116,20 +128,17 @@ class SavedNews extends Component {
 
 
     handleAddNotes(id) {
-
         // toggle modal to input notes
         swal({
   text: "Write something here:",
   content: el,
-  buttons: {
-    confirm: {
+  
       /*
        * We need to initialize the value of the button to
        * an empty string instead of "true":
        */
-      value: DEFAULT_INPUT_TEXT,
-    },
-  },
+      value: noteInput,
+   
 })
 .then((value) => {
   swal(`You typed: ${value}`);
@@ -171,7 +180,7 @@ class SavedNews extends Component {
 
     renderNotesModal(){
         return(
-                <div className="modal swal-modal">
+                <div className="modal">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -295,3 +304,17 @@ class SavedNews extends Component {
 
 //export class 
 export default SavedNews;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
