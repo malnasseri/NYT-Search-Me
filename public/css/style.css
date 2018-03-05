@@ -130,6 +130,7 @@ li.list-group-item {
 	max-width: 95%;
 	padding-left: 50px;
 	text-align: center;
+	padding-bottom: 80px;
 }
 .save-btn {
 margin-bottom: 10px;
@@ -199,6 +200,7 @@ width: 32%;
 .articles-panel {
 	margin-left: 15px;
 	width: 75%;
+	padding-bottom: 80px;
 }
 
  
