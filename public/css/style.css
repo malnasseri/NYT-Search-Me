@@ -289,21 +289,42 @@ fieldset {
 	width: 350px;
 	float: none;
 	margin: 0 auto !important;
+	margin-bottom: 12px !important;
 }
 .saved-articles {
 	margin-left: -25px;
 }
 .articles-panel {
-	margin-left: -5px;
+	margin-left: 10px;
 }
 }
+@media only screen and (min-width : 667px) and (max-width: 767px){
 
+.search-panel .form-control {
+	width: 600px;
+}
+#submit {
+	width: 600px;
+	margin-left: 30px !important;
+}
+.well {
+	width: 600px;
+	float: none;
+	margin-left: -15px !important;
+}
+.article {
+	width: 600px;
+	float: none;
+	margin: 0 auto !important;
+	margin-bottom: 12px !important;
+	min-height: 400px;
 
+}
+.articles-panel {
+	margin-left: 35px;
+}
 
-
-
-
-
+}
 
 
 
