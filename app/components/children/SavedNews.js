@@ -81,7 +81,7 @@ class SavedNews extends Component {
             noteInput:noteInput
 
                         })
-            console.log(this.state)
+            console.log(this.state.noteInput)
     }
 
     handleSaveNote() {
