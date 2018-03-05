@@ -147,9 +147,7 @@ class SavedNews extends Component {
                         <li className="list-group-item">
                             <button type="button" 
                                 className="close" 
-                                data-toggle="tooltip" 
-                                data-placement="top" 
-                                title="Remove"
+                                
                                 onClick={()=>this.handleDeleteNote(note._id)}
                                 >
                                 <span>&times;</span>
@@ -172,9 +170,7 @@ class SavedNews extends Component {
                     <div className="well" key={news._id}>
                         <button type="button" 
                         className="close" 
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Delete"
+                       
                         onClick={()=>this.handleDeleteClick(news._id)}
                         >
                             <span>&times;</span>
