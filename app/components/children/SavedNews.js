@@ -83,6 +83,7 @@ class MyInput extends Component {
  
     this.state = {
       noteInput: DEFAULT_INPUT_TEXT,
+      newsID: ""
     };
   }
  
