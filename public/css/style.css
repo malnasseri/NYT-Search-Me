@@ -128,7 +128,8 @@ img {
 	text-align: center;
 }
 .save-btn {
-	margin-top: 0;
+margin-bottom: 10px;
+padding: none;
 }
 .modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
@@ -136,7 +137,7 @@ img {
 -ms-transition:opacity .3s linear, top .3s ease-out;
 -o-transition:opacity .3s linear, top .3s ease-out;
 transition:opacity .3s linear, top .3s ease-out;
-top:15%;
+top:25%;
 }
 .modal-content {
 	background-color: #f4f5f6;
