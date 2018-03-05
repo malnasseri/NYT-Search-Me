@@ -7,59 +7,6 @@ import helpers from "../utils/helpers";
 
 import ReactDOM from 'react-dom';
  
-const DEFAULT_INPUT_TEXT = "";
- 
-class MyInput extends Component {
-  constructor(props) {
-    super(props);
- 
-    this.state = {
-      noteInput: "",
-    };
-  }
- 
-  changeText(e) {
-    let noteInput = e.target.value;
- 
-    this.setState({
-      noteInput,
-    });
- 
-    /*
-     * This will update the value that the confirm
-     * button resolves to:
-     */
-    swal.setActionValue(noteInput);
-  }
- 
-  render() {
-    return (
-        <div>
-                            
-                            
-      <input
-        value={this.state.noteInput}
-        onChange={this.changeText.bind(this)}
-      />
-      <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-      </div>
-    )
-  }
-}
- 
-// We want to retrieve MyInput as a pure DOM node: 
-let wrapper = document.createElement('div');
-ReactDOM.render(<MyInput />, wrapper);
-let el = wrapper.firstChild;
- 
 
 
 
@@ -128,7 +75,47 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         // toggle modal to input notes
-        swal({
+      const DEFAULT_INPUT_TEXT = "";
+ 
+class MyInput extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      text: DEFAULT_INPUT_TEXT,
+    };
+  }
+ 
+  changeText(e) {
+    let text = e.target.value;
+ 
+    this.setState({
+      text,
+    });
+ 
+    /*
+     * This will update the value that the confirm
+     * button resolves to:
+     */
+    swal.setActionValue(text);
+  }
+ 
+  render() {
+    return (
+      <input
+        value={this.state.text}
+        onChange={this.changeText.bind(this)}
+      />
+    )
+  }
+}
+ 
+// We want to retrieve MyInput as a pure DOM node: 
+let wrapper = document.createElement('div');
+ReactDOM.render(<MyInput />, wrapper);
+let el = wrapper.firstChild;
+ 
+swal({
   text: "Write something here:",
   content: el,
   buttons: {
@@ -174,10 +161,10 @@ class SavedNews extends Component {
         });
     }
 
-    // handleNoteInputChange(event) {
-    //     // set note input whenever users type
-    //     this.setState({ noteInput: event.target.value});
-    // }
+    handleNoteInputChange(event) {
+        // set note input whenever users type
+        this.setState({ noteInput: event.target.value});
+    }
 
     renderNotesModal(){
         return(
