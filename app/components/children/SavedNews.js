@@ -21,7 +21,6 @@ class SavedNews extends Component {
         this.handleSaveNote = this.handleSaveNote.bind(this);
         this.renderSavedNotes = this.renderSavedNotes.bind(this);
     }
-
     //After this component is loaded then call getSavedNews function
     componentDidMount() {
         this.getSavedNews();
@@ -67,21 +66,11 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         // toggle modal to input notes
-         swal("Write something here:", {
-                  content: "input",
-                })
-                .then((noteInput) => {
-                  swal(`You typed: ${noteInput}`);
-                  
-                });
+        $('.modal').modal();
 
         // set newsId state to whateever id in the add notes buttons clicked
-        this.setState({
-            newsID: id,
-            noteInput:noteInput
+        this.setState({newsID: id})
 
-                        })
-            console.log(this.state.noteInput)
     }
 
     handleSaveNote() {
