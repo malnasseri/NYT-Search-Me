@@ -1,8 +1,59 @@
 // import React from "react";
 import React, { Component } from 'react';
-
+import swal from 'sweetalert';
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
+
+import ReactDOM from 'react-dom';
+ 
+const DEFAULT_INPUT_TEXT = "";
+ 
+class MyInput extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      noteInput: "",
+      newsID: ""
+    };
+  }
+ 
+  changeText(e) {
+    let noteInput = e.target.value;
+ 
+    this.setState({
+      noteInput,
+    });
+ 
+    /*
+     * This will update the value that the confirm
+     * button resolves to:
+     */
+    swal.setActionValue(noteInput);
+  }
+ 
+  render() {
+    return (
+         <input 
+                                value={this.state.noteInput}
+                                className="form-control input-lg" 
+                                id="focusedInput" 
+                                type="text"
+                                onChange={this.changeText.bind(this)} 
+                                />
+      
+    )
+  }
+}
+ 
+// We want to retrieve MyInput as a pure DOM node: 
+let wrapper = document.createElement('div');
+ReactDOM.render(<MyInput />, wrapper);
+let el = wrapper.firstChild;
+ 
+
+
+
 
 class SavedNews extends Component {
     constructor(){
@@ -65,8 +116,24 @@ class SavedNews extends Component {
 
 
     handleAddNotes(id) {
+
         // toggle modal to input notes
-        $('.modal').modal();
+        swal({
+  text: "Write something here:",
+  content: el,
+  buttons: {
+    confirm: {
+      /*
+       * We need to initialize the value of the button to
+       * an empty string instead of "true":
+       */
+      value: DEFAULT_INPUT_TEXT,
+    },
+  },
+})
+.then((value) => {
+  swal(`You typed: ${value}`);
+});
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
