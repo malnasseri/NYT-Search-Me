@@ -130,7 +130,7 @@ img {
 .save-btn {
 	margin-top: 0;
 }
-.modal.show{
+/*.modal.show{
 -webkit-transition:opacity .3s linear, top .3s ease-out;
 -moz-transition:opacity .3s linear, top .3s ease-out;
 -ms-transition:opacity .3s linear, top .3s ease-out;
@@ -140,7 +140,7 @@ top:15%;
 }
 .modal-content {
 	background-color: #f4f5f6;
-}
+}*/
 .btn , button {
 	cursor: pointer;
 }
