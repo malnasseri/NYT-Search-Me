@@ -82,11 +82,12 @@ class SavedNews extends Component {
     content: "input",
     buttons: {
             cancel: true,
-            confirm: this.handleSaveNote
+            confirm: "Submit"
         }
     }).then( val => {
         if(val) {
-            this.setState({noteInput: val}) 
+            this.setState({noteInput: val})
+            console.log(this.state.val) 
         }
     });
 
