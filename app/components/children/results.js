@@ -29,7 +29,7 @@ class Results extends Component {
 
         // for a UX purpose disable button after click save.
         // $("#"+newsNum).text("Saved!").addClass("disabled");
-            $("#"+newsNum).hide(1000);
+            $("#"+newsNum).hide();
         
             // Run the query for the "POST" to the server
             helpers.postNews(this.props.results[newsNum])
@@ -45,7 +45,7 @@ class Results extends Component {
         if(this.props.results[0]){
         return(
         <div className="panel panel-default articles-panel">
-                <div className="panel-heading text-center"><h5>Results</h5></div>
+                <div className="panel-heading text-center"></div>
                 <div className="panel-body">
                     {/*use a map function to loop through an array in JSX  */}
                     {this.props.results.map(function(search, i) {
@@ -54,9 +54,9 @@ class Results extends Component {
                                 <div className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
-                                <p>{search.snippet}</p>
-                                <small><strong><p>{search.byline}</p></strong></small>
-                                <small><cite title="Source Title"> {search.date.substring(0, 10)}</cite></small>
+                                <p id="snippet">{search.snippet}</p>
+                                <small><strong><p id="byline">{search.byline}</p></strong></small>
+                                <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>
@@ -66,10 +66,10 @@ class Results extends Component {
                                 <div  className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
-                                <p>{search.snippet}</p>
-                                <small><strong><p>{search.byline}</p></strong></small>
+                                <p id="snippet">{search.snippet}</p>
+                                <small><strong><p id="byline">{search.byline}</p></strong></small>
                                  
-                                <small><cite title="Source Title">{search.date.substring(0, 10)}</cite></small>
+                                <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>

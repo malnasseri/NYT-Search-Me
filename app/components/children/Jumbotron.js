@@ -15,22 +15,31 @@ class Jumbotron extends Component {
         
         if(this.props.location == "/savednews"){
             return(
-                <Link to="/"><button className="btn btn-default btn-lg">Search</button></Link>
+               <div>
+                <Link to="/"><button className="btn btn-default btn-lg home">Search</button></Link>
+                <Link to="savednews"><button className="btn btn-lg savednews active"> Saved News</button></Link>
+                
+                </div>
             )
         }else{
             return(
-                <Link to="savednews"><button className="btn btn-danger btn-lg"><i className="fa fa-floppy-o" aria-hidden="true"></i> Saved News</button></Link>
+                <div>
+                <Link to="/"><button className="btn btn-default btn-lg home active">Search</button></Link>
+                <Link to="savednews"><button className="btn btn-lg savednews"> Saved News</button></Link>
+                
+                </div>
             )
+
         }
     }
     render(){
         return(
             <div className="jumbotron">
-                <h1 className="text-center">
+                <h1 className="header text-center">
                    
-                    New York Times Article Scrubber
+                    NYT Search Me
                 </h1>
-                <p className="text-center">
+                <p>
                     {this.renderBtn()}
                 </p>
             </div>

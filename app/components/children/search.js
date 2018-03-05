@@ -1,5 +1,6 @@
 // Include React
 import React, { Component } from "react";
+import swal from 'sweetalert';
 
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
@@ -15,7 +16,7 @@ class Search extends Component {
             topic: "", 
             startYear: "", 
             endYear: "", 
-            searchBtn: " Seach", 
+            searchBtn: " Search", 
             isDisabled: "",
             results: []
         };
@@ -70,7 +71,7 @@ class Search extends Component {
         $(".disabled").removeClass("disabled").text("Save");
         //if users do not enter topic then alert
         if(this.state.topic.length == 0){
-            return $(".modal").modal();
+            return swal( "Oops" ,  "You must enter a topic!" ,  "error" );
 
         //otherwise run query
         }else{
@@ -91,17 +92,15 @@ class Search extends Component {
     //for rendering alert
     renderAlert(){
         return (
-            <div className="modal">
+            <div className="modal search-modal">
                 <div className="modal-dialog">
                     <div className="modal-content">
-                    <div className="modal-header">
-                        <h4 className="modal-title">Hello Users!</h4>
-                    </div>
+                    
                     <div className="modal-body">
-                        <p>Please enter topic!</p>
+                        <h4 className="text-center">You must enter a topic!</h4>
                     </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                    <div className="modal-footer col-md-7">
+                        <button type="button" className="btn btn-default center-block" data-dismiss="modal">Close</button>
                     </div>
                     </div>
                 </div>
@@ -112,14 +111,14 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <div className="col-md-10 col-md-offset-1">
+                <div>
                     <div className="panel panel-default search-panel">
-                        <div className="panel-heading text-center"><h5>Search</h5></div>
+                        <div className="panel-heading text-center"></div>
                         <div className="panel-body">
                             <form className="form-horizontal">
                                 <fieldset>
                                     <div className="form-group">
-                                        <label className="col-md-2 control-label text-danger" id="topicText">Topic</label>
+                                        <label className="col-md-2 control-label text-danger" id="topicText">Topic (Required)</label>
                                         <div className="col-md-6">
                                             <input type="text"
                                             value={this.state.topic} 
@@ -130,7 +129,7 @@ class Search extends Component {
                                         </div>                                             
                                     </div>
                                     <div className="form-group"> 
-                                        <label className="col-md-2 control-label text-danger" id="startYearText">Start Year</label>
+                                        <label className="col-md-2 control-label text-danger" id="startYearText">Start Year (Optional)</label>
                                         <div className="col-md-2">
                                             <input type="text"
                                             value={this.state.startYear} 
@@ -140,7 +139,7 @@ class Search extends Component {
                                             onChange={this.handleStartYearChange}
                                             />
                                         </div>
-                                        <label className="col-md-2 control-label text-danger" id="endYearText">End Year</label>
+                                        <label className="col-md-2 control-label text-danger" id="endYearText">End Year (Optional)</label>
                                         <div className="col-md-2">
                                             <input type="text" 
                                             value={this.state.endYear} 
@@ -153,7 +152,7 @@ class Search extends Component {
                                     </div>
                                 </fieldset>
                                 <div className="row">
-                                <div className="col-md-2 col-md-offset-5 text-center">
+                                <div>
                                     <button 
                                     className="btn btn-default btn-lg" 
                                     type="submit"
