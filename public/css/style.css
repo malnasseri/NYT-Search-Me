@@ -1,4 +1,6 @@
-
+body {
+	padding-bottom: 60px;
+}
 
 .btn:focus,.btn:active, .btn:visited, .btn-danger:focus,.btn-danger:active {
    outline: none !important;
