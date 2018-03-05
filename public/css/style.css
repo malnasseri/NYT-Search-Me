@@ -263,6 +263,41 @@ text-align: center;
 	font-size: 20px;
 }
 
+@media only screen and (min-width : 370px) and (max-width: 666px){
+
+.jumbotron p {
+	margin-bottom: 0;
+	margin-left: 65px !important;
+}
+
+fieldset {
+	margin-left: 40px;
+}
+#submit {
+	margin-left: 110px !important;
+
+}
+.search-panel {
+	text-align: center;
+}
+.well {
+width: 350px;
+	float: none;
+	margin-left: -5px;
+}
+.article {
+	width: 350px;
+	float: none;
+	margin-left: -5px;
+}
+}
+
+
+
+
+
+
+
 
 
 
