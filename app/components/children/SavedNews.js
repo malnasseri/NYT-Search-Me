@@ -129,7 +129,7 @@ class SavedNews extends Component {
                             onClick={()=>this.setState({newsID: ""})}
                             >Close</button>
                             <button type="button" 
-                            className="btn btn-primary"
+                            className="btn btn-primary save-btn"
                             onClick={this.handleSaveNote}
                             >Save</button>
                         </div>
