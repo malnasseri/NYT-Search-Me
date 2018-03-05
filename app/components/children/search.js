@@ -71,7 +71,7 @@ class Search extends Component {
         $(".disabled").removeClass("disabled").text("Save");
         //if users do not enter topic then alert
         if(this.state.topic.length == 0){
-            return swal( "Oops" ,  "You must enter a topic!" ,  "error" );
+            return swal( "Oops" ,  "You must enter a topic!" ,  "error");
 
         //otherwise run query
         }else{

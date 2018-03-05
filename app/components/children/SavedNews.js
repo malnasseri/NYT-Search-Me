@@ -1,19 +1,10 @@
 // import React from "react";
 import React, { Component } from 'react';
-import swal from 'sweetalert';
+
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
 
-
-import ReactDOM from 'react-dom';
- 
-
-
-
-
-
 class SavedNews extends Component {
-
     constructor(){
         super();
         this.state = {
@@ -76,33 +67,21 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         // toggle modal to input notes
-        let noteInput = "";
-        swal({
-    title:"confirmation",
-    text: "Are You Sure?",
-    content: "input",
-    buttons: {
-            cancel: true,
-            confirm: "Submit"
-        }
-    }).then( noteInput => {
-        if(noteInput) {
-            swal({
-                title: "Thanks!",
-                text: "You typed: " + noteInput,
-                icon: "success"
-            });
-        }
-    });
-
+         swal("Write something here:", {
+                  content: "input",
+                })
+                .then((noteInput) => {
+                  swal(`You typed: ${noteInput}`);
+                  
+                });
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({
             newsID: id,
-            noteInput: noteInput
+            noteInput:noteInput
 
-        })
-            console.log(this.state.noteInput)
+                        })
+            console.log(this.state)
     }
 
     handleSaveNote() {
@@ -133,7 +112,6 @@ class SavedNews extends Component {
         // set note input whenever users type
         this.setState({ noteInput: event.target.value});
     }
-
 
     renderNotesModal(){
         return(
@@ -259,20 +237,5 @@ class SavedNews extends Component {
     }
 }
 
-
 //export class 
 export default SavedNews;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
