@@ -152,7 +152,7 @@ class SavedNews extends Component {
                                 >
                                 <span>&times;</span>
                             </button>
-                            <p className="note-p"><span className="label label-success">Note :</span>
+                            <p className="note-p"><span className="label label-success">Note: </span>
                                 {note.note}
                             </p>
                         </li>
