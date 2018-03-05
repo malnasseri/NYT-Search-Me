@@ -281,9 +281,9 @@ fieldset {
 	text-align: center;
 }
 .well {
-width: 350px;
+	width: 350px;
 	float: none;
-	margin-left: -5px;
+	margin-left: -15px !important;
 }
 .article {
 	width: 350px;
