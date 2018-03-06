@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const NewsSchema = new Schema({
     headline: {
-        type: String
+        type: String,
+        unique: true
     },
     snippet: {
         type: String
