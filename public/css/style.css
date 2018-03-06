@@ -168,7 +168,7 @@ width: 32%;
 	background-color: #f4f5f6;
 	margin-left: 15px;
 	margin-bottom: 10px;
-	min-height: 500px;
+	min-height: 520px;
 }
 .article {
 	width: 49%;
@@ -178,7 +178,7 @@ width: 32%;
 	background-color: #f4f5f6;
 	margin-left: 9px;
 	margin-bottom: 15px;
-	/*min-height: 480px;*/
+	min-height: 520px;
 	border-radius: .4rem;
 }
 .well .btn {
@@ -317,7 +317,7 @@ fieldset {
 	float: none;
 	margin: 0 auto !important;
 	margin-bottom: 12px !important;
-	/*min-height: 400px;*/
+	min-height: 400px;
 
 }
 .articles-panel {

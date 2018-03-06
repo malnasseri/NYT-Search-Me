@@ -76,7 +76,7 @@ class Results extends Component {
                         )} else if((search.date) && (!search.image)){
                             return (
                                 <div  className="article" id={i} key={i}>
-                               
+                                <img src="/img/unavailable.png"></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">{search.byline}</p></strong></small>
@@ -87,8 +87,8 @@ class Results extends Component {
                                 </div>
                         )} else {
                                 return (
-                                    <div  className="article" id={i} key={i}>
-                               
+                            <div  className="article" id={i} key={i}>
+                                <img src="/img/unavailable.png"></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">{search.byline}</p></strong></small>
@@ -96,7 +96,7 @@ class Results extends Component {
                             
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
-                                </div>
+                            </div>
                                 )
                             }
                     },this)}
