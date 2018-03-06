@@ -29,7 +29,7 @@ const helpers = {
           queryURL = `${queryURLbase}${searchTopic}&begin_date=${searchStartYear}0101&end_date=${searchEndYear}0101`
       }
     // Log Url
-     console.log(queryURL);
+     // console.log(queryURL);
       return axios.get(queryURL).then(function(res) {
       // If get a result, return that result's formatted address property
       if (res.data.response.docs[0]) {
@@ -48,7 +48,7 @@ const helpers = {
             
             const image = res.data.response.docs[i].multimedia[18].url;
           
-            console.log(res.data.response.docs[i]);
+            // console.log(res.data.response.docs[i]);
             news.push({snippet: snippet, headline: headline, url: url, date: date, image: image, byline:byline});
           }
           else if((res.data.response.docs[i].multimedia[18]) && (!res.data.response.docs[i].byline)){
@@ -60,7 +60,7 @@ const helpers = {
             
             const image = res.data.response.docs[i].multimedia[18].url;
           
-            console.log(res.data.response.docs[i]);
+            // console.log(res.data.response.docs[i]);
             news.push({snippet: snippet, headline: headline, url: url, date: date, image:image});
           }
           else if((res.data.response.docs[i].byline) && (!res.data.response.docs[i].multimedia[18])){
@@ -72,7 +72,7 @@ const helpers = {
             
             // const image = res.data.response.docs[i].multimedia[18].url;
           
-            console.log(res.data.response.docs[i]);
+            // console.log(res.data.response.docs[i]);
             news.push({snippet: snippet, headline: headline, url: url, date: date, byline:byline});
           }
            else if((!res.data.response.docs[i].byline) && (!res.data.response.docs[i].multimedia[18])){
@@ -92,7 +92,7 @@ const helpers = {
       }
       // If we don't get any results, return an empty string
       
-            return swal( "Oops" ,  "You must enter a topic!" ,  "error");
+            return swal( "Oops" ,  "There was no results! \n \n Please try a different Topic." , "error");
     });
   },
 

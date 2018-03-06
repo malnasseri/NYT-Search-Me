@@ -36,7 +36,7 @@ class Results extends Component {
             .then(function(data) {
 
                 //console.log(mongo db_.d if it successfully added to server. )
-                console.log(data)
+                // console.log(data)
             }.bind(this));
     }
     renderResults() {

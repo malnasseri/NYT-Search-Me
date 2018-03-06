@@ -35,7 +35,7 @@ class SavedNews extends Component {
         // get saved news from server with helpers
         helpers.GetSavedNews().then(savedNews=>{
             // console.log(savedNews.data);
-            console.log("Run get saved News");
+            // console.log("Run get saved News");
             //after data come back then set state
             this.setState({savedNews: savedNews.data})
         });
@@ -47,7 +47,7 @@ class SavedNews extends Component {
         event.preventDefault();
         //send id to helper and delete from database then re-render
         helpers.deleteNews(id).then((data)=>{
-            console.log(`Deleted News and its notes`)
+            // console.log(`Deleted News and its notes`)
             this.getSavedNews()}
         );
     }
@@ -58,7 +58,7 @@ class SavedNews extends Component {
         event.preventDefault();
         //send id to helper and delete from database then re-render
         helpers.deleteNotes(id).then((data)=>{
-            console.log(`Deleted Note `)
+            // console.log(`Deleted Note `)
             this.getSavedNews()}
         );
     }

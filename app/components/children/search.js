@@ -71,7 +71,7 @@ class Search extends Component {
         $(".disabled").removeClass("disabled").text("Save");
         //if users do not enter topic then alert
         if(this.state.topic.length == 0){
-            return swal( "Oops" ,  "You must enter a topic!" ,  "error");
+            return swal( "Oops" ,  "You must enter a topic!",  "error");
 
         //otherwise run query
         }else{
@@ -80,7 +80,7 @@ class Search extends Component {
                 // Run the query for the news
                 helpers.runQuery(this.state.topic, this.state.startYear, this.state.endYear)
                 .then(function(data) {
-                    console.log(data);
+                    // console.log(data);
                     // After get the news then set state results
                     this.setState({results: data});
                 }.bind(this));

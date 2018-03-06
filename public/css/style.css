@@ -258,9 +258,11 @@ text-align: center;
 }
 .swal-modal {
 	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+
 }
 .swal-text {
 	font-size: 20px;
+	text-align: center !important;
 }
 
 @media only screen and (min-width : 370px) and (max-width: 666px){
