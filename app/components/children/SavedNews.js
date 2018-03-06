@@ -176,7 +176,7 @@ class SavedNews extends Component {
                         </button>
                         <img src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
-                        <span className="label label-default">{i+1}</span>
+                        <span className="label label-default"></span>
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
@@ -212,7 +212,7 @@ class SavedNews extends Component {
                         </button>
                         <img src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
-                        <span className="label label-default">{i+1}</span>
+                        <span className="label label-default"></span>
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
@@ -243,7 +243,7 @@ class SavedNews extends Component {
                         </button>
                         <img src="/img/unavailable.png"></img>
                         <a target="_blank" href={news.url}><h5>
-                        <span className="label label-default">{i+1}</span>
+                        <span className="label label-default"></span>
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
@@ -281,7 +281,7 @@ class SavedNews extends Component {
                         </button>
                         <img src="/img/unavailable.png"></img>
                         <a target="_blank" href={news.url}><h5>
-                        <span className="label label-default">{i+1}</span>
+                        <span className="label label-default"></span>
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
