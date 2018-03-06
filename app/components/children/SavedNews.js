@@ -165,30 +165,28 @@ class SavedNews extends Component {
     renderSavedNews() {
         // iterate through the state
         return this.state.savedNews.map((news, i)=>{
+            if ((news.date) && (news.image)){
                 return (
-                 
                     <div className="well" key={news._id}>
                         <button type="button" 
                         className="close" 
-                       
                         onClick={()=>this.handleDeleteClick(news._id)}
                         >
-                            <span>&times;</span>
+                        <span>&times;</span>
                         </button>
                         <img src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
-                            <span className="label label-default">{i+1}</span>
-                            {news.headline}
+                        <span className="label label-default">{i+1}</span>
+                        {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                         <small><strong><p id="byline">{news.byline}</p></strong></small>
+                        <small><strong><p id="byline">{news.byline}</p></strong></small>
                         <div className="text">
-                            <small>
-                                <strong>
-                                    <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
-                                </strong>
-                            </small>
-                            
+                        <small>
+                        <strong>
+                        <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
+                        </strong>
+                        </small>
                         </div>
                         {this.renderSavedNotes(i)}
                         <p className="text-right">
@@ -202,6 +200,105 @@ class SavedNews extends Component {
                     
                   </div>
                 )
+            }    
+                    else if((!news.date) && (news.image)){
+                        return (
+                    <div className="well" key={news._id}>
+                        <button type="button" 
+                        className="close" 
+                        onClick={()=>this.handleDeleteClick(news._id)}
+                        >
+                        <span>&times;</span>
+                        </button>
+                        <img src={"https://static01.nyt.com/" + news.image}></img>
+                        <a target="_blank" href={news.url}><h5>
+                        <span className="label label-default">{i+1}</span>
+                        {news.headline}
+                        </h5></a>
+                        <p id="snippet">{news.snippet}</p>
+                        <small><strong><p id="byline">{news.byline}</p></strong></small>
+                       
+                        {this.renderSavedNotes(i)}
+                        <p className="text-right">
+                            <button 
+                            className="btn btn-info btn-sm btn-block"
+                            onClick={()=>this.handleAddNotes(news._id)}
+                            >
+                            <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
+                            </button>
+                        </p>
+                    
+                  </div>
+                )
+                    }
+                    else if((news.date) && (!news.image)){ 
+
+                        return (
+                    <div className="well" key={news._id}>
+                        <button type="button" 
+                        className="close" 
+                        onClick={()=>this.handleDeleteClick(news._id)}
+                        >
+                        <span>&times;</span>
+                        </button>
+                        <img src="/img/unavailable.png"></img>
+                        <a target="_blank" href={news.url}><h5>
+                        <span className="label label-default">{i+1}</span>
+                        {news.headline}
+                        </h5></a>
+                        <p id="snippet">{news.snippet}</p>
+                        <small><strong><p id="byline">{news.byline}</p></strong></small>
+                        <div className="text">
+                        <small>
+                        <strong>
+                        <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
+                        </strong>
+                        </small>
+                        </div>
+                        {this.renderSavedNotes(i)}
+                        <p className="text-right">
+                            <button 
+                            className="btn btn-info btn-sm btn-block"
+                            onClick={()=>this.handleAddNotes(news._id)}
+                            >
+                            <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
+                            </button>
+                        </p>
+                    
+                  </div>
+                )
+
+
+                    }
+                    else {
+                        return (
+                    <div className="well" key={news._id}>
+                        <button type="button" 
+                        className="close" 
+                        onClick={()=>this.handleDeleteClick(news._id)}
+                        >
+                        <span>&times;</span>
+                        </button>
+                        <img src="/img/unavailable.png"></img>
+                        <a target="_blank" href={news.url}><h5>
+                        <span className="label label-default">{i+1}</span>
+                        {news.headline}
+                        </h5></a>
+                        <p id="snippet">{news.snippet}</p>
+                        <small><strong><p id="byline">{news.byline}</p></strong></small>
+                        {this.renderSavedNotes(i)}
+                        <p className="text-right">
+                            <button 
+                            className="btn btn-info btn-sm btn-block"
+                            onClick={()=>this.handleAddNotes(news._id)}
+                            >
+                            <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
+                            </button>
+                        </p>
+                    
+                  </div>
+                )
+                    }
             })
     }
     render() {
