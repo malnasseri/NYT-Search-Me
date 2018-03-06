@@ -284,12 +284,14 @@ fieldset {
 	width: 350px;
 	float: none;
 	margin-left: -15px !important;
+	min-height: none;
 }
 .article {
 	width: 350px;
 	float: none;
 	margin: 0 auto !important;
 	margin-bottom: 12px !important;
+	min-height: none;
 }
 .saved-articles {
 	margin-left: -25px;
@@ -311,13 +313,14 @@ fieldset {
 	width: 600px;
 	float: none;
 	margin-left: -15px !important;
+	min-height: none;
 }
 .article {
 	width: 600px;
 	float: none;
 	margin: 0 auto !important;
 	margin-bottom: 12px !important;
-	min-height: 400px;
+	min-height: none;
 
 }
 .articles-panel {
