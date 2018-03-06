@@ -19,14 +19,14 @@ const helpers = {
       
         // if users don't enter end year
       } else if (searchTopic && searchStartYear && !searchEndYear){
-          queryURL = `${queryURLbase}${searchTopic}&begin_date${searchStartYear}0101`
+          queryURL = `${queryURLbase}${searchTopic}&begin_date=${searchStartYear}0101`
      
         // if users don't enter start year
       } else if (searchTopic && !searchStartYear && searchEndYear){
-          queryURL = `${queryURLbase}${searchTopic}&end_date${searchEndYear}0101`
+          queryURL = `${queryURLbase}${searchTopic}&end_date=${searchEndYear}0101`
 
       } else {
-          queryURL = `${queryURLbase}${searchTopic}&begin_date${searchStartYear}0101&end_date${searchEndYear}0101`
+          queryURL = `${queryURLbase}${searchTopic}&begin_date=${searchStartYear}0101&end_date=${searchEndYear}0101`
       }
     // Log Url
      console.log(queryURL);
@@ -35,15 +35,58 @@ const helpers = {
       if (res.data.response.docs[0]) {
         let news = []
         // Iterate through docs array and get only 5 news
+       
+
          for(let i = 0; i < 10; i++){
+
+          if((res.data.response.docs[i].multimedia[18]) && (res.data.response.docs[i].byline)) {
             const snippet = res.data.response.docs[i].snippet;
             const headline = res.data.response.docs[i].headline.main;
             const url = res.data.response.docs[i].web_url;
             const date = res.data.response.docs[i].pub_date; 
             const byline = res.data.response.docs[i].byline.original;
+            
             const image = res.data.response.docs[i].multimedia[18].url;
+          
             console.log(res.data.response.docs[i]);
-            news.push({snippet: snippet, headline: headline, url: url, date: date, byline:byline, image:image});
+            news.push({snippet: snippet, headline: headline, url: url, date: date, image: image, byline:byline});
+          }
+          else if((res.data.response.docs[i].multimedia[18]) && (!res.data.response.docs[i].byline)){
+            const snippet = res.data.response.docs[i].snippet;
+            const headline = res.data.response.docs[i].headline.main;
+            const url = res.data.response.docs[i].web_url;
+            const date = res.data.response.docs[i].pub_date; 
+            // const byline = res.data.response.docs[i].byline.original;
+            
+            const image = res.data.response.docs[i].multimedia[18].url;
+          
+            console.log(res.data.response.docs[i]);
+            news.push({snippet: snippet, headline: headline, url: url, date: date, image:image});
+          }
+          else if((res.data.response.docs[i].byline) && (!res.data.response.docs[i].multimedia[18])){
+            const snippet = res.data.response.docs[i].snippet;
+            const headline = res.data.response.docs[i].headline.main;
+            const url = res.data.response.docs[i].web_url;
+            const date = res.data.response.docs[i].pub_date; 
+            const byline = res.data.response.docs[i].byline.original;
+            
+            // const image = res.data.response.docs[i].multimedia[18].url;
+          
+            console.log(res.data.response.docs[i]);
+            news.push({snippet: snippet, headline: headline, url: url, date: date, byline:byline});
+          }
+           else if((!res.data.response.docs[i].byline) && (!res.data.response.docs[i].multimedia[18])){
+            const snippet = res.data.response.docs[i].snippet;
+            const headline = res.data.response.docs[i].headline.main;
+            const url = res.data.response.docs[i].web_url;
+            const date = res.data.response.docs[i].pub_date; 
+            // const byline = res.data.response.docs[i].byline.original;
+            
+            // const image = res.data.response.docs[i].multimedia[18].url;
+          
+            console.log(res.data.response.docs[i]);
+            news.push({snippet: snippet, headline: headline, url: url, date: date});
+          }
          }
           return (news);
       }

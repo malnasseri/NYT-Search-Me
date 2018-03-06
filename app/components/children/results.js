@@ -49,7 +49,7 @@ class Results extends Component {
                 <div className="panel-body">
                     {/*use a map function to loop through an array in JSX  */}
                     {this.props.results.map(function(search, i) {
-                        if (i % 2 == 0){
+                        if ((search.date) && (search.image)){
                             return (
                                 <div className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
@@ -61,7 +61,7 @@ class Results extends Component {
                                 
                                 </div>
 
-                        )} else{
+                        )} else if((!search.date) && (search.image)){
                             return (
                                 <div  className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
@@ -69,11 +69,36 @@ class Results extends Component {
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">{search.byline}</p></strong></small>
                                  
-                                <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
+                               
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>
-                        )}
+                        )} else if((search.date) && (!search.image)){
+                            return (
+                                <div  className="article" id={i} key={i}>
+                               
+                                <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
+                                <p id="snippet">{search.snippet}</p>
+                                <small><strong><p id="byline">{search.byline}</p></strong></small>
+                                 
+                               <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
+                                <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
+                                
+                                </div>
+                        )} else {
+                                return (
+                                    <div  className="article" id={i} key={i}>
+                               
+                                <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
+                                <p id="snippet">{search.snippet}</p>
+                                <small><strong><p id="byline">{search.byline}</p></strong></small>
+                                 
+                            
+                                <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
+                                
+                                </div>
+                                )
+                            }
                     },this)}
                 </div>
             </div>
