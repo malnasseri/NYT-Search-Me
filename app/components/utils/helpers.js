@@ -1,6 +1,6 @@
 // Include the axios package for performing HTTP requests (promise based alternative to request)
 import axios from "axios";
-
+import swal from 'sweetalert';
 // NYT API Key
 const authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
 
@@ -91,7 +91,8 @@ const helpers = {
           return (news);
       }
       // If we don't get any results, return an empty string
-      return (false);
+      
+            return swal( "Oops" ,  "You must enter a topic!" ,  "error");
     });
   },
 
