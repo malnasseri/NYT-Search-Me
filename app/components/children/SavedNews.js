@@ -180,14 +180,14 @@ class SavedNews extends Component {
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                        <small><strong><p id="byline">{news.byline}</p></strong></small>
-                        <div className="text">
+                        <small><strong><p id="byline">On {news.date.substring(0, 10)} {news.byline}</p></strong></small>
+                        {/*<div className="text">
                         <small>
                         <strong>
                         <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
                         </strong>
                         </small>
-                        </div>
+                        </div>*/}
                         {this.renderSavedNotes(i)}
                         <p className="text-right">
                             <button 

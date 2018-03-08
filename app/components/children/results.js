@@ -55,8 +55,8 @@ class Results extends Component {
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p>
-                                <small><strong><p id="byline">{search.byline}</p></strong></small>
-                                <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
+                                <small><strong><p id="byline">On {search.date.substring(0, 10)} {search.byline}</p></strong></small>
+                                {/*<small><strong><cite title="Source Title">On {search.date.substring(0, 10)}</cite></strong></small>*/}
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
                                 
                                 </div>
