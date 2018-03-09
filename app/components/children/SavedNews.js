@@ -208,7 +208,7 @@ class SavedNews extends Component {
                         <div className="article-footer">
                         <p className="text-right">
 
-                            <button 
+                            <button key={news._id}
                             className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
                             >
