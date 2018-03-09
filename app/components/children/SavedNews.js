@@ -66,6 +66,7 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         
+        console.log("+++++++++++++++++++++++++++++++" + id);
         // toggle modal to input notes
         $('.modal').modal();
 
