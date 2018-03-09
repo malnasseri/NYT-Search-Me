@@ -104,7 +104,7 @@ class SavedNews extends Component {
 
     renderNotesModal(){
         return(
-                <div className="modal">
+                <div className="modal" key={news._id}>
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -122,8 +122,9 @@ class SavedNews extends Component {
                                 />
                             </div>
                         </div>
+                        {this.renderSavedNotes(i)}
                         <div className="modal-footer">
-                        
+
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
