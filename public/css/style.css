@@ -169,7 +169,7 @@ width: 32%;
 	background-color: #f4f5f6;
 	margin-left: 15px;
 	margin-bottom: 15px;
-	height: 550px;
+	min-height: 550px;
 }
 .article {
 	width: 49%;
@@ -179,7 +179,7 @@ width: 32%;
 	background-color: #f4f5f6;
 	margin-left: 9px;
 	margin-bottom: 15px;
-	height: 450px;
+	min-height: 450px;
 	border-radius: .4rem;
 	position: relative;
 }
