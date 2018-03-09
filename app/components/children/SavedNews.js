@@ -128,7 +128,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(i){
-         return this.state.savedNews[i].map((news)=>{
+         return this.state.savedNews[i].map((news, i)=>{
         return(
                 <div className="modal">
                     <div className="modal-dialog">
