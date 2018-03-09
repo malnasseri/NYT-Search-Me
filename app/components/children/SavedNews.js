@@ -68,8 +68,8 @@ class SavedNews extends Component {
         
         console.log("+++++++++++++++++++++++++++++++" + id);
         // toggle modal to input notes
-        var modal = $('.modal');
-        this.modal.modal();
+
+        $('.modal').modal();
 
 
         // set newsId state to whateever id in the add notes buttons clicked
@@ -130,7 +130,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         return this.state.savedNews.map((news, i)=>{
+         
         return(
                 
                 <div className="modal">
@@ -170,7 +170,7 @@ class SavedNews extends Component {
                 </div>
             
         )
-    })
+    
     }
 
    
