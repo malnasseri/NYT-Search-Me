@@ -132,7 +132,7 @@ class SavedNews extends Component {
          
         return(
                 
-                <div className="modal" key={news._id}>
+                <div className="modal">
 
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -159,7 +159,7 @@ class SavedNews extends Component {
 
 
 
-                            }
+                            
                             </div>
                         </div>
                         <div className="modal-footer">
