@@ -303,14 +303,14 @@ fieldset {
 	width: 350px;
 	float: none;
 	margin-left: -15px !important;
-	min-height: none;
+	/*min-height: none;*/
 }
 .article {
 	width: 350px;
 	float: none;
 	margin: 0 auto !important;
 	margin-bottom: 12px !important;
-	min-height: none;
+	/*min-height: none;*/
 }
 .saved-articles {
 	margin-left: -25px;
