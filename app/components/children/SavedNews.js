@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
 
-
-
 class SavedNews extends Component {
     constructor(){
         super();
@@ -131,7 +129,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         return this.state.savedNews.map((news, i)=>{
+         return this.news.map((news, i)=>{
         return(
                 
                 <div className="modal" key={news._id}>
@@ -332,7 +330,7 @@ class SavedNews extends Component {
                                 </div>
                         </div>
                     </div>
-                    {/*{this.renderNotesModal()*/}
+                    {this.renderNotesModal()}
                 </div>
         )
     }
