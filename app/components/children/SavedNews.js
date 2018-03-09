@@ -130,6 +130,7 @@ class SavedNews extends Component {
     renderSavedNews() {
         // iterate through the state
         return this.state.savedNews.map((news, i)=>{
+
             if ((news.date) && (news.image)){
                 return (
                     <div className="well" key={news._id}>
@@ -269,7 +270,10 @@ class SavedNews extends Component {
                   </div>
                 )
                     }
-                     renderNotesModal(){
+
+            })
+    }
+     renderNotesModal(){
         return(
                 <div className="modal" key={news._id}>
                     <div className="modal-dialog">
@@ -306,8 +310,6 @@ class SavedNews extends Component {
                     </div>
                 </div>
         )
-    }
-            })
     }
     render() {
         return(
