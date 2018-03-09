@@ -166,7 +166,7 @@ class SavedNews extends Component {
                         </div>
                     </div>
                 </div>
-            })
+            
         )
     })
     }
