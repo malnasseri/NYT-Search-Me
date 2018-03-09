@@ -68,7 +68,8 @@ class SavedNews extends Component {
         
         console.log("+++++++++++++++++++++++++++++++" + id);
         // toggle modal to input notes
-        $('.modal').modal();
+        var modal = $('.modal');
+        this.modal.modal();
 
 
         // set newsId state to whateever id in the add notes buttons clicked
