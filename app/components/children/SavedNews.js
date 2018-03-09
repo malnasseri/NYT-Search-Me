@@ -123,6 +123,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
+                        {this.renderSavedNotes(i)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
