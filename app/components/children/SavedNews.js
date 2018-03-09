@@ -111,7 +111,7 @@ class SavedNews extends Component {
                         <div className="modal-header">
                             <h4 className="modal-title">Please add your note here.</h4>
                         </div>
-                        <div className="modal-body" key={news._id}>
+                        <div className="modal-body">
                             <div className="form-group">
                                 <label className="control-label">Type here.</label>
                                 <input 
@@ -123,7 +123,7 @@ class SavedNews extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="modal-footer">
+                        <div className="modal-footer" key={news._id}>
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
