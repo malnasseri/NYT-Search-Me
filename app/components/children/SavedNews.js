@@ -127,8 +127,8 @@ class SavedNews extends Component {
         })
     }
 
-    renderNotesModal(i){
-         return this.state.savedNews[i].map((news, i)=>{
+    renderNotesModal(){
+         
         return(
                 <div className="modal">
                     <div className="modal-dialog">
@@ -146,7 +146,7 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {this.renderSavedNotes(i)}
+                                {this.state.savedNews.map((news, i)=>{this.renderSavedNotes(i))}}
                             </div>
                         </div>
                         <div className="modal-footer">
@@ -165,7 +165,7 @@ class SavedNews extends Component {
                     </div>
                 </div>
         )
-    })
+    
     }
 
    
