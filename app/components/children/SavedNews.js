@@ -66,9 +66,8 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         
-        console.log("+++++++++++++++++++++++++++++++" + id);
+        console.log("+++++++++++++++++++++++++++++++" + id)
         // toggle modal to input notes
-
         $('.modal').modal();
 
 
@@ -129,12 +128,12 @@ class SavedNews extends Component {
         })
     }
 
-    renderNotesModal(){
-         
+    renderNotesModal(i){
+         return this.state.savedNews[i].map((news, i)=>{
         return(
                 
-                <div className="modal">
-                    {this.state.savedNews.map((news, i)=>{
+                <div className="modal" key={news._id}>
+
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -167,11 +166,10 @@ class SavedNews extends Component {
                         </div>
                         </div>
                     </div>
-                     })}
                 </div>
             
         )
-   
+    })
     }
 
    
