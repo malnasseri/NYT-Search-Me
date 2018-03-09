@@ -154,6 +154,7 @@ class SavedNews extends Component {
                     </div>
                 </div>
         )
+    })
     }
 
     renderSavedNotes(i){
