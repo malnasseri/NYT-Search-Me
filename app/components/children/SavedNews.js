@@ -127,7 +127,7 @@ class SavedNews extends Component {
                     </ul>
                 </div>
             )
-        }, this)
+        })
     }
 
     renderNotesModal(){
@@ -332,7 +332,7 @@ class SavedNews extends Component {
                                 </div>
                         </div>
                     </div>
-                    {this.renderNotesModal()}
+                    {/*{this.renderNotesModal()*/}
                 </div>
         )
     }
