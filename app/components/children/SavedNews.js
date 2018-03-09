@@ -103,6 +103,29 @@ class SavedNews extends Component {
         this.setState({ noteInput: event.target.value});
     }
 
+     renderSavedNotes(i){
+        return this.state.savedNews[i].note.map((note, index)=>{
+            return(
+                <div className=""key={note._id}>
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <button type="button" 
+                                className="close" 
+                                
+                                onClick={()=>this.handleDeleteNote(note._id)}
+                                >
+                                <span>&times;</span>
+                            </button>
+                            <p className="note-p"><span className="label label-success">Note: </span>
+                                {note.note}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            )
+        })
+    }
+
     renderNotesModal(){
          return this.state.savedNews.map((news, i)=>{
         return(
@@ -143,28 +166,7 @@ class SavedNews extends Component {
     })
     }
 
-    renderSavedNotes(i){
-        return this.state.savedNews[i].note.map((note, index)=>{
-            return(
-                <div className=""key={note._id}>
-                    <ul className="list-group">
-                        <li className="list-group-item">
-                            <button type="button" 
-                                className="close" 
-                                
-                                onClick={()=>this.handleDeleteNote(note._id)}
-                                >
-                                <span>&times;</span>
-                            </button>
-                            <p className="note-p"><span className="label label-success">Note: </span>
-                                {note.note}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            )
-        })
-    }
+   
 
     renderSavedNews() {
         // iterate through the state
