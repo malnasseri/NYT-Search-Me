@@ -67,7 +67,7 @@ class SavedNews extends Component {
     handleAddNotes(id) {
         // toggle modal to input notes
         $('.modal').modal();
-
+         this.getSavedNews()
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
 
@@ -93,7 +93,7 @@ class SavedNews extends Component {
              //Close modal
             // $('.modal').modal('hide');
             //Reset state
-            // this.setState({noteInput: "", newsID: ""})
+            this.setState({noteInput: "", newsID: ""})
         });
     }
 
