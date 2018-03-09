@@ -154,6 +154,7 @@ class SavedNews extends Component {
                             className="btn btn-primary save-btn"
                             onClick={this.handleSaveNote}
                             >Save</button>
+                            {this.renderSavedNotes(i)}
                         </div>
                         </div>
                     </div>
