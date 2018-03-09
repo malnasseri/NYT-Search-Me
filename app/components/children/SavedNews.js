@@ -91,9 +91,9 @@ class SavedNews extends Component {
             this.getSavedNews()
 
              //Close modal
-            $('.modal').modal('hide');
+            // $('.modal').modal('hide');
             //Reset state
-            this.setState({noteInput: "", newsID: ""})
+            // this.setState({noteInput: "", newsID: ""})
         });
     }
 
