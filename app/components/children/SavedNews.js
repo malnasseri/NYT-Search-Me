@@ -156,7 +156,7 @@ class SavedNews extends Component {
                                         
                                     </div>
                                 );
-                            }, this)}
+                            })}
 
 
 
