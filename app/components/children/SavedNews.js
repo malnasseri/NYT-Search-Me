@@ -129,7 +129,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         
+         return this.state.savedNews.map((news, i)=>{
         return(
                 
                 <div className="modal">
@@ -179,6 +179,7 @@ class SavedNews extends Component {
                 </div>
             
         )
+    })
     
     }
 
