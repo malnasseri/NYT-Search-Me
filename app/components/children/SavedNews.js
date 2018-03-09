@@ -125,6 +125,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
+        return this.state.savedNews[i].note.map((note, index)=>{
         return(
                 <div className="modal">
                     <div className="modal-dialog">
@@ -154,7 +155,21 @@ class SavedNews extends Component {
                             className="btn btn-primary save-btn"
                             onClick={this.handleSaveNote}
                             >Save</button>
-                            {this.renderSavedNotes(i)}
+                             <div className=""key={note._id}>
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <button type="button" 
+                                className="close" 
+                                
+                                onClick={()=>this.handleDeleteNote(note._id)}
+                                >
+                                <span>&times;</span>
+                            </button>
+                            <p className="note-p"><span className="label label-success">Note: </span>
+                                {note.note}
+                            </p>
+                        </li>
+                    </ul>
                         </div>
                         </div>
                     </div>
