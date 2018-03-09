@@ -154,7 +154,7 @@ class SavedNews extends Component {
                                        {this.renderSavedNotes(i)}
                                     </tr>
                                 );
-                            }.bind(this))}
+                            }, .bind(this))}
 
                                 
                             </div>
