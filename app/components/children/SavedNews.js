@@ -6,8 +6,6 @@ import helpers from "../utils/helpers";
 
 
 
-
-
 class SavedNews extends Component {
     constructor(){
         super();
@@ -133,7 +131,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         return this.state.savedNews.map((news, i)=>{
+         return this.state.savedNews.map((i)=>{
         return(
                 
                 <div className="modal">
@@ -153,9 +151,7 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                <div key={news._id}>
                                 {this.renderSavedNotes(i)}
-                                </div>
                             </div>
                         </div>
                         <div className="modal-footer">
