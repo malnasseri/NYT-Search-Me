@@ -189,7 +189,9 @@ class SavedNews extends Component {
                         </small>
                         </div>*/}
                         {this.renderSavedNotes(i)}
+                        <div className="article-footer">
                         <p className="text-right">
+
                             <button 
                             className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
@@ -197,6 +199,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
+                        </div>
                     
                   </div>
                 )
@@ -219,6 +222,7 @@ class SavedNews extends Component {
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                        
                         {this.renderSavedNotes(i)}
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -227,6 +231,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
+                        </div>
                     
                   </div>
                 )
@@ -247,15 +252,12 @@ class SavedNews extends Component {
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                        <small><strong><p id="byline">{news.byline}</p></strong></small>
+                        <small><strong><p id="byline">On {news.date.substring(0, 10)} {news.byline}</p></strong></small>
                         <div className="text">
-                        <small>
-                        <strong>
-                        <cite id="date" title="Source Title">{news.date.substring(0, 10)}</cite>
-                        </strong>
-                        </small>
+                        
                         </div>
                         {this.renderSavedNotes(i)}
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -264,6 +266,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
+                        </div>
                     
                   </div>
                 )
@@ -287,6 +290,7 @@ class SavedNews extends Component {
                         <p id="snippet">{news.snippet}</p>
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                         {this.renderSavedNotes(i)}
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -295,6 +299,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
+                        </div>
                     
                   </div>
                 )

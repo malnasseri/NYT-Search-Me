@@ -57,8 +57,9 @@ class Results extends Component {
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">On {search.date.substring(0, 10)} {search.byline}</p></strong></small>
                                 {/*<small><strong><cite title="Source Title">On {search.date.substring(0, 10)}</cite></strong></small>*/}
+                                <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
-                                
+                                </div>
                                 </div>
 
                         )} else if((!search.date) && (search.image)){
@@ -69,9 +70,9 @@ class Results extends Component {
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">{search.byline}</p></strong></small>
                                  
-                               
+                               <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
-                                
+                                </div>
                                 </div>
                         )} else if((search.date) && (!search.image)){
                             return (
@@ -79,11 +80,11 @@ class Results extends Component {
                                 <img src="/img/unavailable.png"></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p>
-                                <small><strong><p id="byline">{search.byline}</p></strong></small>
+                                <small><strong><p id="byline">On {search.date.substring(0, 10)} {search.byline}</p></strong></small>
                                  
-                               <small><strong><cite title="Source Title">{search.date.substring(0, 10)}</cite></strong></small>
+                              <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
-                                
+                                </div>
                                 </div>
                         )} else {
                                 return (
@@ -93,9 +94,9 @@ class Results extends Component {
                                 <p id="snippet">{search.snippet}</p>
                                 <small><strong><p id="byline">{search.byline}</p></strong></small>
                                  
-                            
+                            <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
-                                
+                                </div>
                             </div>
                                 )
                             }
