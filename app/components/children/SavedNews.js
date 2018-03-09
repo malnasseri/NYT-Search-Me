@@ -151,7 +151,11 @@ class SavedNews extends Component {
                                 />
                                 {this.state.savedNews.map((news, i)=>{
                                     return (
-                                {this.renderSavedNotes(i)}) })  
+                                        <div>
+                                {this.renderSavedNotes(i)}
+                                    </div>
+
+                                ) })  
 
 
 
