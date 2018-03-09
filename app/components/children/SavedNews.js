@@ -127,7 +127,7 @@ class SavedNews extends Component {
                     </ul>
                 </div>
             )
-        }, bind(this))
+        }, this)
     }
 
     renderNotesModal(){
