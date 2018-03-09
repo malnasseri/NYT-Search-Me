@@ -155,7 +155,7 @@ class SavedNews extends Component {
                                 {this.renderSavedNotes(i)}
                                     </div>
 
-                                ) })  
+                                ) })}  
 
 
 
