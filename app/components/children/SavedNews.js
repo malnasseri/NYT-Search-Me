@@ -67,7 +67,7 @@ class SavedNews extends Component {
     handleAddNotes(id) {
         // toggle modal to input notes
         $('.modal').modal();
-         this.getSavedNews();
+
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
 
@@ -91,7 +91,7 @@ class SavedNews extends Component {
             this.getSavedNews()
 
              //Close modal
-            // $('.modal').modal('hide');
+            $('.modal').modal('hide');
             //Reset state
             this.setState({noteInput: "", newsID: ""})
         });
@@ -105,7 +105,7 @@ class SavedNews extends Component {
     renderNotesModal(){
          return this.state.savedNews.map((news, i)=>{
         return(
-                <div className="modal">
+                <div className="modal" key={news._id}>
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -123,7 +123,7 @@ class SavedNews extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="modal-footer" key={news._id}>
+                        <div className="modal-footer">
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
