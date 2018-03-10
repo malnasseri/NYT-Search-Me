@@ -133,8 +133,8 @@ class SavedNews extends Component {
             console.log("NEWS: " + news);
             console.log("i: " + i);
         return(
-                
-                <div className="modal" key={i}>
+                <div key={i}>
+                <div className="modal">
 
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -169,6 +169,7 @@ class SavedNews extends Component {
                         </div>
                     </div>
                 </div>
+                </div> 
             
         )
     })
