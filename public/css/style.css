@@ -209,6 +209,8 @@ top:25%;
 #snippet {
 	margin:0 auto !important;
 	padding: 0 !important;
+	padding-right: 10px !important;
+	padding-left: 10px !important;
 	margin-bottom: 10px !important;
 }
 #date {
