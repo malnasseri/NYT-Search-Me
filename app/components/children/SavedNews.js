@@ -149,7 +149,7 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {this.renderSavedNotes(i)}
+                                {this.renderSavedNotes()}
                             </div>
                         </div>
                         <div className="modal-footer">
