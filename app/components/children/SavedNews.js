@@ -200,7 +200,7 @@ class SavedNews extends Component {
                         </small>
                         </div>*/}
                         {this.renderSavedNotes(i)}
-                        <div>
+                        <div className="article-footer">
                         <p className="text-right">
 
                             <button 
@@ -233,7 +233,7 @@ class SavedNews extends Component {
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                        
                         {this.renderSavedNotes(i)}
-                        <div>
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -268,7 +268,7 @@ class SavedNews extends Component {
                         
                         </div>
                         {this.renderSavedNotes(i)}
-                        <div>
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -301,7 +301,7 @@ class SavedNews extends Component {
                         <p id="snippet">{news.snippet}</p>
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                         {this.renderSavedNotes(i)}
-                        <div>
+                        <div className="article-footer">
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
