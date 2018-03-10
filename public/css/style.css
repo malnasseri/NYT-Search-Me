@@ -330,6 +330,8 @@ text-align: center;
 
 @media only screen and (min-width : 370px) and (max-width: 666px){
 
+
+
 .jumbotron p {
 	margin-bottom: 0;
 	margin-left: 65px !important;
@@ -351,6 +353,13 @@ fieldset {
 	margin-left: 35px !important;
 	/*min-height: none;*/
 }
+.list-group {
+	width: 300px;
+	
+	margin-right: 0px;
+	margin-top: 2px;
+}
+
 #snippet {
 	padding: 0 !important;
 }
