@@ -133,8 +133,8 @@ class SavedNews extends Component {
             console.log("NEWS: " + news);
             console.log("i: " + i);
         return(
-                <div key={i}>
-                <div className="modal">
+                
+                <div className="modal" key={news._id}>
 
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -169,7 +169,6 @@ class SavedNews extends Component {
                         </div>
                     </div>
                 </div>
-                </div> 
             
         )
     })
@@ -241,7 +240,7 @@ class SavedNews extends Component {
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
-                            onClick={()=>this.handleAddNotes(news._id)}
+                            onClick={()=>this.handleAddNotes(i)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
