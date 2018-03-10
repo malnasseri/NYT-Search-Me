@@ -201,7 +201,7 @@ class SavedNews extends Component {
                         </div>*/}
                         {this.renderSavedNotes(i)}
                         <div className="article-footer2">
-                        <p className="text-right">
+                       
 
                             <button 
                             className="btn btn-info btn-sm btn-block"
@@ -209,7 +209,7 @@ class SavedNews extends Component {
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
-                        </p>
+                       
                         </div>
                     
                   </div>
@@ -234,14 +234,14 @@ class SavedNews extends Component {
                        
                         {this.renderSavedNotes(i)}
                         <div className="article-footer2">
-                        <p className="text-right">
+                        
                             <button 
                             className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
-                        </p>
+                        
                         </div>
                     
                   </div>
@@ -269,14 +269,14 @@ class SavedNews extends Component {
                         </div>
                         {this.renderSavedNotes(i)}
                         <div className="article-footer2">
-                        <p className="text-right">
+                       
                             <button 
                             className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
-                        </p>
+                        
                         </div>
                     
                   </div>
@@ -302,14 +302,14 @@ class SavedNews extends Component {
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
                         {this.renderSavedNotes(i)}
                         <div className="article-footer2">
-                        <p className="text-right">
+                        
                             <button 
                             className="btn btn-info btn-sm btn-block"
                             onClick={()=>this.handleAddNotes(news._id)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
-                        </p>
+                       
                         </div>
                     
                   </div>
