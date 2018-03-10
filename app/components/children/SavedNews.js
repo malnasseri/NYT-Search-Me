@@ -152,6 +152,8 @@ class SavedNews extends Component {
                         </div>
                         <div> 
                         {this.state.savedNews.map((news, i)=>{
+                            return (
+                                <div>
                         {this.state.savedNews[i].note.map((note, index)=>{
             return(
                 <div className=""key={note._id}>
@@ -173,6 +175,8 @@ class SavedNews extends Component {
             )
         })
     }
+    </div>
+    )
 })
                     }
     </div>
