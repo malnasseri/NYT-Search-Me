@@ -179,6 +179,7 @@ top:25%;
 }
 .img {
 	float: left;
+	margin-bottom: 15px;
 }
 .article {
 	width: 49%;
