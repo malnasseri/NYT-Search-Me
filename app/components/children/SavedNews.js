@@ -148,7 +148,14 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {this.state.savedNews.map((news, i)=>{this.renderSavedNotes(i)})}
+                                {this.state.savedNews.map((news, i)=> {
+                                    return (
+                                        <div>
+                                    {this.renderSavedNotes(i)}
+
+                                    </div>
+                                    )
+                                }) }
                             </div>
                         </div>
                         <div className="modal-footer">
