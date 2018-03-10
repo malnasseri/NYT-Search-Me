@@ -210,7 +210,7 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
-                        
+
                         </div>
                     
                   </div>
@@ -351,6 +351,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
+                        {console.log("+++++++++++++++++++++++++" + note.note)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
