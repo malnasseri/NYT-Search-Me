@@ -313,6 +313,8 @@ text-align: center;
 }
 .article-footer2 button {
 	display: inline;
+	margin-top: 18px;
+	margin-bottom: -10px;
 }
 
 
