@@ -194,7 +194,10 @@ top:25%;
 }
 .well .btn {
 	margin-top: 10px;
-	
+
+}
+.saved-notes {
+	padding-bottom: 15px;
 }
 #byline {
 	margin:0 auto !important;

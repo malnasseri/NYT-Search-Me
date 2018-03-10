@@ -107,7 +107,7 @@ class SavedNews extends Component {
      renderSavedNotes(i){
         return this.state.savedNews[i].note.map((note, index)=>{
             return(
-                <div className=""key={note._id}>
+                <div className="saved-notes" key={note._id}>
                     <ul className="list-group">
                         <li className="list-group-item">
                             <button type="button" 
