@@ -180,7 +180,7 @@ top:25%;
 	margin-top: 2px;
 }
 .well h5 {
-	margin-top: 35px !important;
+	margin-top: 25px !important;
 }
 .img {
 	float: left;
@@ -204,10 +204,12 @@ top:25%;
 #byline {
 	margin:0 auto !important;
 	padding: 0 !important;
+	margin-bottom: 10px !important;
 }
 #snippet {
 	margin:0 auto !important;
 	padding: 0 !important;
+	margin-bottom: 10px !important;
 }
 #date {
 	padding: 0 !important;
