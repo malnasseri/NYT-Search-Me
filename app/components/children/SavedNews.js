@@ -211,42 +211,6 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                         <div className="modal">
-
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                        <div className="modal-header">
-                            <h4 className="modal-title">Please add your note here.</h4>
-                        </div>
-                        <div className="modal-body">
-                            <div className="form-group">
-                                <label className="control-label">Type here.</label>
-                                <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.handleNoteInputChange} 
-                                />
-
-                            </div>
-                        </div>
-                        <div className="modal-footer">
-                            {this.renderSavedNotes(i)}
-                            <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary save-btn"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-                             
-                        </div>
-                        </div>
-                    </div>
-                </div>
                     
                   </div>
                 )
@@ -279,42 +243,7 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                     <div className="modal">
-
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                        <div className="modal-header">
-                            <h4 className="modal-title">Please add your note here.</h4>
-                        </div>
-                        <div className="modal-body">
-                            <div className="form-group">
-                                <label className="control-label">Type here.</label>
-                                <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.handleNoteInputChange} 
-                                />
-
-                            </div>
-                        </div>
-                        <div className="modal-footer">
-                            {this.renderSavedNotes(i)}   
-                          <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary save-btn"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-                             
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                    
                   </div>
                 )
                     }
@@ -349,42 +278,7 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                     <div className="modal">
-
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                        <div className="modal-header">
-                            <h4 className="modal-title">Please add your note here.</h4>
-                        </div>
-                        <div className="modal-body">
-                            <div className="form-group">
-                                <label className="control-label">Type here.</label>
-                                <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.handleNoteInputChange} 
-                                />
-
-                            </div>
-                        </div>
-                        <div className="modal-footer">
-                        {this.renderSavedNotes(i)}
-                            <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary save-btn"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-                             
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                    
                   </div>
                 )
 
@@ -417,42 +311,7 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                     <div className="modal">
-
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                        <div className="modal-header">
-                            <h4 className="modal-title">Please add your note here.</h4>
-                        </div>
-                        <div className="modal-body">
-                            <div className="form-group">
-                                <label className="control-label">Type here.</label>
-                                <input 
-                                value={this.state.noteInput}
-                                className="form-control input-lg" 
-                                id="focusedInput" 
-                                type="text"
-                                onChange={this.handleNoteInputChange} 
-                                />
-
-                            </div>
-                        </div>
-                        <div className="modal-footer">
-                        {this.renderSavedNotes(i)}
-                            <button type="button" 
-                            className="btn btn-default" 
-                            data-dismiss="modal"
-                            onClick={()=>this.setState({newsID: ""})}
-                            >Close</button>
-                            <button type="button" 
-                            className="btn btn-primary save-btn"
-                            onClick={this.handleSaveNote}
-                            >Save</button>
-                             
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                    
                   </div>
                 )
                     }
@@ -470,7 +329,7 @@ class SavedNews extends Component {
                                 </div>
                         </div>
                     </div>
-                    
+                    {this.renderNotesModal()}
                 </div>
         )
     }
