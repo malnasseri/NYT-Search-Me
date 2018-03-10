@@ -153,7 +153,7 @@ class SavedNews extends Component {
                         <div> 
                         {this.state.savedNews.map((news, i)=>{
                             return (
-                                <div key={news._id}>
+                                <div key={i}>
                         {this.state.savedNews[i].note.map((note, index)=>{
             return(
                 <div className=""key={note._id}>
