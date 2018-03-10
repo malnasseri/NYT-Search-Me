@@ -162,6 +162,7 @@ top:25%;
 }
 .well {
 	position: relative;
+
 	width: 100%;
 	
 	text-align: center;
@@ -288,6 +289,9 @@ text-align: center;
 	/*opacity: 0.8;*/
 	z-index: 1;
 	font-weight: bold;
+}
+.article-footer2 button {
+	margin-top: 15px;
 }
 .article-footer2 {
 	/*position: absolute;*/
