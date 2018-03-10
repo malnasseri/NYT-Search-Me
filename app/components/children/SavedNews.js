@@ -191,7 +191,7 @@ class SavedNews extends Component {
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                        <small><strong><p id="byline">On {news.date.substring(0, 10)} {news.byline}</p></strong></small>
+                        <small><strong><p id="byline">On {Moment(news.date).format('MMM DD  YYYY')} {news.byline}</p></strong></small>
                         {/*<div className="text">
                         <small>
                         <strong>
@@ -263,7 +263,7 @@ class SavedNews extends Component {
                         {news.headline}
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
-                        <small><strong><p id="byline">On {news.date.substring(0, 10)} {news.byline}</p></strong></small>
+                        <small><strong><p id="byline">On {Moment(news.date).format('MMM DD  YYYY')} {news.byline}</p></strong></small>
                         <div className="text">
                         
                         </div>

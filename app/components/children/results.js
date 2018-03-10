@@ -1,5 +1,7 @@
 // Include React
 import React, { Component } from 'react';
+import Moment from 'moment';
+
 
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
@@ -40,6 +42,10 @@ class Results extends Component {
             }.bind(this));
     }
     renderResults() {
+        
+    
+   
+    
 
         // render its content whenever there are some results came from its parent.
         if(this.props.results[0]){
@@ -49,13 +55,14 @@ class Results extends Component {
                 <div className="panel-body">
                     {/*use a map function to loop through an array in JSX  */}
                     {this.props.results.map(function(search, i) {
+
                         if ((search.date) && (search.image)){
                             return (
                                 <div className="article" id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
-                                <p id="snippet">{search.snippet}</p>
-                                <small><strong><p id="byline">On {search.date.substring(0, 10)} {search.byline}</p></strong></small>
+                                <p id="snippet">{search.snippet}</p> 
+                                <small><strong><p id="byline">On {Moment(search.date).format('MMM DD  YYYY')} {search.byline}</p></strong></small>
                                 {/*<small><strong><cite title="Source Title">On {search.date.substring(0, 10)}</cite></strong></small>*/}
                                 <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>
@@ -80,7 +87,7 @@ class Results extends Component {
                                 <img src="/img/unavailable.png"></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p>
-                                <small><strong><p id="byline">On {search.date.substring(0, 10)} {search.byline}</p></strong></small>
+                                <small><strong><p id="byline">On {Moment(search.date).format('MMM DD  YYYY')} {search.byline}</p></strong></small>
                                  
                               <div className="article-footer">
                                 <button className="btn btn-primary btn-block" onClick={this.handleClick} id={i}>Save</button>

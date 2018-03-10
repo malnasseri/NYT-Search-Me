@@ -50,6 +50,7 @@ const helpers = {
           
             // console.log(res.data.response.docs[i]);
             news.push({snippet: snippet, headline: headline, url: url, date: date, image: image, byline:byline});
+            
           }
           else if((res.data.response.docs[i].multimedia[18]) && (!res.data.response.docs[i].byline)){
             const snippet = res.data.response.docs[i].snippet;
