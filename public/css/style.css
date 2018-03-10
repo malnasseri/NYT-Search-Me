@@ -176,7 +176,8 @@ top:25%;
 .list-group {
 	width: 700px;
 	float: right !important;
-	margin-right: 30px;
+	margin-right: 60px;
+	margin-top: 2px;
 }
 .img {
 	float: left;
