@@ -66,7 +66,6 @@ class SavedNews extends Component {
 
     handleAddNotes(id) {
         
-        console.log("+++++++++++++++++++++++++++++++" + id)
         // toggle modal to input notes
         $('.modal').modal();
 
@@ -129,12 +128,10 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         return this.state.savedNews.map((news, i)=>{
-            console.log("NEWS: " + news);
-            console.log("i: " + i);
+         
         return(
                 
-                <div className="modal" key={news._id}>
+                <div className="modal">
 
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -151,7 +148,7 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {this.renderSavedNotes(i)}
+                                {this.state.savedNews.map((news, i)=>{this.renderSavedNotes(i)})}
                             </div>
                         </div>
                         <div className="modal-footer">
@@ -171,7 +168,7 @@ class SavedNews extends Component {
                 </div>
             
         )
-    })
+    
     }
 
    
@@ -240,7 +237,7 @@ class SavedNews extends Component {
                         <p className="text-right">
                             <button 
                             className="btn btn-info btn-sm btn-block"
-                            onClick={()=>this.handleAddNotes(i)}
+                            onClick={()=>this.handleAddNotes(news._id)}
                             >
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
