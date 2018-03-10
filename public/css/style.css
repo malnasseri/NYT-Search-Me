@@ -348,7 +348,7 @@ fieldset {
 .well {
 	width: 350px;
 	float: none;
-	margin-left: 20px !important;
+	margin-left: 40px !important;
 	/*min-height: none;*/
 }
 .article {
