@@ -148,10 +148,31 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {console.log("+++++++++++++++" + this.state.savedNews)}
-                                
                             </div>
                         </div>
+                        <div> 
+                        {this.state.savedNews[i].note.map((note, index)=>{
+            return(
+                <div className=""key={note._id}>
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <button type="button" 
+                                className="close" 
+                                
+                                onClick={()=>this.handleDeleteNote(note._id)}
+                                >
+                                <span>&times;</span>
+                            </button>
+                            <p className="note-p"><span className="label label-success">Note: </span>
+                                {note.note}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            )
+        })
+    }
+    </div>
                         <div className="modal-footer">
                             <button type="button" 
                             className="btn btn-default" 
