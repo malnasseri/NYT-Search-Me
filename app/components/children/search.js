@@ -119,7 +119,7 @@ class Search extends Component {
                                 <fieldset>
                                     <div className="form-group">
                                         <label className="col-md-2 control-label text-danger" id="topicText">Topic (Required)</label>
-                                        <div className="col-md-6">
+                                        <div >
                                             <input type="text"
                                             value={this.state.topic} 
                                             className="form-control" 
