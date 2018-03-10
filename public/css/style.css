@@ -417,7 +417,25 @@ margin-bottom: 50px !important;
 .articles-panel {
 	margin-left: 35px;
 }
+.well h5 {
+	    padding-right: 15px;
+	    margin-top: 0;
 
+}
+#snippet {
+	margin: 0 auto !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+    padding-right: 15px !important;
+}
+#byline {
+	width: 250px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+    float: right;
+    margin-right: 20px !important;
+}
 }
 
 
