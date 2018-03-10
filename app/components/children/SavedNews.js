@@ -73,7 +73,7 @@ class SavedNews extends Component {
 
         // set newsId state to whateever id in the add notes buttons clicked
         this.setState({newsID: id})
-                console.log(newsID);
+
     }
 
     handleSaveNote() {
@@ -129,7 +129,7 @@ class SavedNews extends Component {
     }
 
     renderNotesModal(){
-         this.state.savedNews.map((news, i)=>{
+         return this.state.savedNews.map((news, i)=>{
         return(
                 
                 <div className="modal" key={news._id}>
