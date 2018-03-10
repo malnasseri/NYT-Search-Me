@@ -210,8 +210,43 @@ class SavedNews extends Component {
                             <i className="fa fa-sticky-note" aria-hidden="true"></i> Add Notes
                             </button>
                         </p>
-
                         </div>
+                         <div className="modal">
+
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h4 className="modal-title">Please add your note here.</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form-group">
+                                <label className="control-label">Type here.</label>
+                                <input 
+                                value={this.state.noteInput}
+                                className="form-control input-lg" 
+                                id="focusedInput" 
+                                type="text"
+                                onChange={this.handleNoteInputChange} 
+                                />
+
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                            <button type="button" 
+                            className="btn btn-default" 
+                            data-dismiss="modal"
+                            onClick={()=>this.setState({newsID: ""})}
+                            >Close</button>
+                            <button type="button" 
+                            className="btn btn-primary save-btn"
+                            onClick={this.handleSaveNote}
+                            >Save</button>
+                             
+                        </div>
+                        </div>
+                    </div>
+                </div>
                     
                   </div>
                 )
@@ -244,7 +279,42 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                    
+                     <div className="modal">
+
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h4 className="modal-title">Please add your note here.</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form-group">
+                                <label className="control-label">Type here.</label>
+                                <input 
+                                value={this.state.noteInput}
+                                className="form-control input-lg" 
+                                id="focusedInput" 
+                                type="text"
+                                onChange={this.handleNoteInputChange} 
+                                />
+
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                            <button type="button" 
+                            className="btn btn-default" 
+                            data-dismiss="modal"
+                            onClick={()=>this.setState({newsID: ""})}
+                            >Close</button>
+                            <button type="button" 
+                            className="btn btn-primary save-btn"
+                            onClick={this.handleSaveNote}
+                            >Save</button>
+                             
+                        </div>
+                        </div>
+                    </div>
+                </div>
                   </div>
                 )
                     }
@@ -279,7 +349,42 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                    
+                     <div className="modal">
+
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h4 className="modal-title">Please add your note here.</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form-group">
+                                <label className="control-label">Type here.</label>
+                                <input 
+                                value={this.state.noteInput}
+                                className="form-control input-lg" 
+                                id="focusedInput" 
+                                type="text"
+                                onChange={this.handleNoteInputChange} 
+                                />
+
+                            </div>
+                        </div>
+                        <div className="modal-footer">
+                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                            <button type="button" 
+                            className="btn btn-default" 
+                            data-dismiss="modal"
+                            onClick={()=>this.setState({newsID: ""})}
+                            >Close</button>
+                            <button type="button" 
+                            className="btn btn-primary save-btn"
+                            onClick={this.handleSaveNote}
+                            >Save</button>
+                             
+                        </div>
+                        </div>
+                    </div>
+                </div>
                   </div>
                 )
 
@@ -312,24 +417,6 @@ class SavedNews extends Component {
                             </button>
                         </p>
                         </div>
-                    
-                  </div>
-                )
-                    }
-            })
-    }
-    render() {
-        return(
-                <div>
-                    <div className="well-container">
-                        <div className="panel panel-default saved-articles">
-                                <div className="panel-heading text-center"></div>
-                                <div className="panel-body">
-                                    {/*We'll call render function here  */}
-                                    {this.renderSavedNews()}
-                                </div>
-                        </div>
-                    </div>
                      <div className="modal">
 
                     <div className="modal-dialog">
@@ -351,7 +438,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                        {console.log("+++++++++++++++++++++++++" + note.note)}
+                        {console.log("++++++++++++++++++++++++++++" + note.note)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
@@ -366,6 +453,24 @@ class SavedNews extends Component {
                         </div>
                     </div>
                 </div>
+                  </div>
+                )
+                    }
+            })
+    }
+    render() {
+        return(
+                <div>
+                    <div className="well-container">
+                        <div className="panel panel-default saved-articles">
+                                <div className="panel-heading text-center"></div>
+                                <div className="panel-body">
+                                    {/*We'll call render function here  */}
+                                    {this.renderSavedNews()}
+                                </div>
+                        </div>
+                    </div>
+                    
                 </div>
         )
     }
