@@ -127,9 +127,9 @@ class SavedNews extends Component {
             )
         })
     }
-    {this.state.savedNews[i].map((news, i)=>{
+
     renderNotesModal(){
-         
+         this.state.savedNews.map((news, i)=>{
         return(
                 
                 <div className="modal" key={news._id}>
@@ -169,9 +169,9 @@ class SavedNews extends Component {
                 </div>
             
         )
-   
+    })
     }
- })}
+
    
 
     renderSavedNews() {
