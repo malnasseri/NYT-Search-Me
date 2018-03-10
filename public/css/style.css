@@ -172,8 +172,8 @@ top:25%;
 	min-height: 300px;
 	
 }
-.well li .list-group-item {
-	max-width: 600px;
+ul .list-group {
+	max-width: 500px !important;
 }
 .img {
 	float: left;
