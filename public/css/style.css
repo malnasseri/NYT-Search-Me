@@ -172,8 +172,8 @@ top:25%;
 	min-height: 300px;
 	
 }
-ul .list-group {
-	max-width: 500px !important;
+.list-group-item {
+	width: 700px;
 }
 .img {
 	float: left;
