@@ -390,7 +390,7 @@ margin-bottom: 50px !important;
 	
 }
 .img {
-	width: 300px;
+	width: 250px !important;
 }
 .search-panel .form-control {
 	width: 600px;
