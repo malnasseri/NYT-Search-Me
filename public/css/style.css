@@ -476,10 +476,14 @@ fieldset {
 .well {
 	width: 740px;
 	float: none;
-	margin-left: 15px !important;
+	margin-left: 12px !important;
 	min-height: none;
 }
-
+.list-group {
+	
+	margin-right: 10px;
+	
+}
 }
 
 
