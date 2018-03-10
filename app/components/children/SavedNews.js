@@ -185,7 +185,7 @@ class SavedNews extends Component {
                         >
                         <span>&times;</span>
                         </button>
-                        <img src={"https://static01.nyt.com/" + news.image}></img>
+                        <img className="img" src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
                         <span className="label label-default"></span>
                         {news.headline}
@@ -224,7 +224,7 @@ class SavedNews extends Component {
                         >
                         <span>&times;</span>
                         </button>
-                        <img src={"https://static01.nyt.com/" + news.image}></img>
+                        <img className="img" src={"https://static01.nyt.com/" + news.image}></img>
                         <a target="_blank" href={news.url}><h5>
                         <span className="label label-default"></span>
                         {news.headline}
@@ -293,7 +293,7 @@ class SavedNews extends Component {
                         >
                         <span>&times;</span>
                         </button>
-                        <img src="/img/unavailable.png"></img>
+                        <img className="img" src="/img/unavailable.png"></img>
                         <a target="_blank" href={news.url}><h5>
                         <span className="label label-default"></span>
                         {news.headline}
