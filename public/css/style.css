@@ -174,7 +174,7 @@ top:25%;
 }
 .list-group-item {
 	width: 700px;
-	float: right;
+	float: right !important;
 }
 .img {
 	float: left;
