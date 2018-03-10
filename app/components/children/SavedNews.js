@@ -132,7 +132,7 @@ class SavedNews extends Component {
          return this.state.savedNews.map((news, i)=>{
         return(
                 
-                <div className="modal" key={this.news._id}>
+                <div className="modal" key={savedNews[i]._id}>
 
                     <div className="modal-dialog">
                         <div className="modal-content">
