@@ -194,7 +194,7 @@ top:25%;
 }
 .well .btn {
 	margin-top: 10px;
-	margin-bottom: -10px;
+	margin-bottom: -30px;
 }
 #byline {
 	margin:0 auto !important;
@@ -306,6 +306,7 @@ text-align: center;
 	/*opacity: 0.8;*/
 	z-index: 1;
 	font-weight: bold;
+	margin-top: 10px;
 }
 
 @media only screen and (min-width : 370px) and (max-width: 666px){
