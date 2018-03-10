@@ -107,7 +107,7 @@ class SavedNews extends Component {
      renderSavedNotes(i){
         return this.state.savedNews[i].note.map((note, index)=>{
             return(
-                <div className="saved-notes" key={note._id}>
+                <div key={note._id}>
                     <ul className="list-group">
                         <li className="list-group-item">
                             <button type="button" 
@@ -199,7 +199,11 @@ class SavedNews extends Component {
                         </strong>
                         </small>
                         </div>*/}
+                        <div className="saved-notes">
                         {this.renderSavedNotes(i)}
+                        </div>
+
+
                         <div className="article-footer2">
                        
 
@@ -231,8 +235,9 @@ class SavedNews extends Component {
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
-                       
+                       <div className="saved-notes">
                         {this.renderSavedNotes(i)}
+                        </div>
                         <div className="article-footer2">
                         
                             <button 
@@ -267,7 +272,9 @@ class SavedNews extends Component {
                         <div className="text">
                         
                         </div>
+                        <div className="saved-notes">
                         {this.renderSavedNotes(i)}
+                        </div>
                         <div className="article-footer2">
                        
                             <button 
@@ -300,7 +307,9 @@ class SavedNews extends Component {
                         </h5></a>
                         <p id="snippet">{news.snippet}</p>
                         <small><strong><p id="byline">{news.byline}</p></strong></small>
+                        <div className="saved-notes">
                         {this.renderSavedNotes(i)}
+                        </div>
                         <div className="article-footer2">
                         
                             <button 

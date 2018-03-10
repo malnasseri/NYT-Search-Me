@@ -194,10 +194,6 @@ top:25%;
 }
 .well .btn {
 	margin-top: 10px;
-
-}
-.saved-notes {
-	padding-bottom: 15px;
 }
 #byline {
 	margin:0 auto !important;
@@ -310,6 +306,12 @@ text-align: center;
 	z-index: 1;
 	font-weight: bold;
 }
+
+.saved-notes {
+	padding: 25px;
+}
+
+
 
 @media only screen and (min-width : 370px) and (max-width: 666px){
 
