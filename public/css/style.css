@@ -194,6 +194,7 @@ top:25%;
 }
 .well .btn {
 	margin-top: 10px;
+	margin-bottom: -10px;
 }
 #byline {
 	margin:0 auto !important;
@@ -290,9 +291,7 @@ text-align: center;
 	z-index: 1;
 	font-weight: bold;
 }
-.article-footer2 button {
-	margin-top: 15px;
-}
+
 .article-footer2 {
 	/*position: absolute;*/
 	bottom: 0;
