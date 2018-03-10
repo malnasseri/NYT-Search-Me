@@ -134,7 +134,7 @@ class SavedNews extends Component {
             console.log("i: " + i);
         return(
                 
-                <div className="modal" key={news._id}>
+                <div className="modal" key={i}>
 
                     <div className="modal-dialog">
                         <div className="modal-content">
