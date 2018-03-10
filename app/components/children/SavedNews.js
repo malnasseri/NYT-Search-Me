@@ -148,7 +148,7 @@ class SavedNews extends Component {
                                 type="text"
                                 onChange={this.handleNoteInputChange} 
                                 />
-                                {console.log("+++++++++++++++" + note.note)}
+                                {console.log("+++++++++++++++" + this.state.savedNews)}
                                 
                             </div>
                         </div>
