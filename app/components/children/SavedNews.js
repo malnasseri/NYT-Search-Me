@@ -232,7 +232,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                            {this.renderSavedNotes(i)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
@@ -300,8 +300,8 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                        {console.log("++++++++++++++++++++++++++++" + note.note)}
-                            <button type="button" 
+                            {this.renderSavedNotes(i)}   
+                          <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
                             onClick={()=>this.setState({newsID: ""})}
@@ -370,7 +370,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                        {this.renderSavedNotes(i)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
@@ -438,7 +438,7 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                        {console.log("++++++++++++++++++++++++++++" + note.note)}
+                        {this.renderSavedNotes(i)}
                             <button type="button" 
                             className="btn btn-default" 
                             data-dismiss="modal"
