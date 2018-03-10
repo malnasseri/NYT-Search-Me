@@ -292,13 +292,27 @@ text-align: center;
 }
 
 .article-footer2 {
-	
+	/*position: absolute;*/
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	/*background-color: #8b9dc3;*/
+	color: white;
+	font-size: 15px;
+	/*border-top: 8px solid #3e9cfc;*/
+	/*opacity: 0.8;*/
+	z-index: 1;
+	font-weight: bold;
 }
 
 .saved-notes {
 
 }
-
+.article-footer2 button {
+	display: inline;
+}
 
 
 @media only screen and (min-width : 370px) and (max-width: 666px){
