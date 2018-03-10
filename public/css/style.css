@@ -346,9 +346,9 @@ fieldset {
 	text-align: center;
 }
 .well {
-	width: 350px;
+	/*width: 350px;
 	float: none;
-	margin-left: -15px !important;
+	margin-left: -15px !important;*/
 	/*min-height: none;*/
 }
 .article {
@@ -375,10 +375,10 @@ fieldset {
 	margin-left: 30px !important;
 }
 .well {
-	width: 600px;
+	/*width: 600px;
 	float: none;
 	margin-left: -15px !important;
-	min-height: none;
+	min-height: none;*/
 }
 .article {
 	width: 600px;
