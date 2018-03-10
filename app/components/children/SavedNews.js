@@ -151,10 +151,8 @@ class SavedNews extends Component {
                             </div>
                         </div>
                         <div> 
-                        {this.state.savedNews.map((news, i)=>{
-                            return (
-                                <div key={i}>
-                        {this.state.savedNews[i].note.map((note, index)=>{
+
+                        {this.state.savedNews.note.map((note, index)=>{
             return(
                 <div className=""key={note._id}>
                     <ul className="list-group">
@@ -175,10 +173,6 @@ class SavedNews extends Component {
             )
         })
     }
-    </div>
-    )
-})
-                    }
     </div>
                         <div className="modal-footer">
                             <button type="button" 
