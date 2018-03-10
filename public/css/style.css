@@ -172,6 +172,9 @@ top:25%;
 	min-height: 300px;
 	
 }
+.well li .list-group-item {
+	max-width: 600px;
+}
 .img {
 	float: left;
 }
