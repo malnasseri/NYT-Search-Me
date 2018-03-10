@@ -389,6 +389,9 @@ margin-bottom: 50px !important;
 	margin-right: 10px;
 	
 }
+.img {
+	width: 300px;
+}
 .search-panel .form-control {
 	width: 600px;
 }
