@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { Component } from 'react';
-
+import Moment from 'moment';
 // Helper for making AJAX requests to our API
 import helpers from "../utils/helpers";
 
