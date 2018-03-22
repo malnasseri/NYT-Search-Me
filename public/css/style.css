@@ -547,7 +547,39 @@ fieldset {
 
 }
 
+@media only screen and (min-width : 1024px) and (max-width: 1279px){
+.search-panel {
 
+	float: none !important;
+	
+}
+
+
+.articles-panel {
+	margin-top:-40px;
+	width: 70%;
+}
+.article {
+	width: 45%;
+	float: left;
+	margin: 0 auto !important;
+	margin-bottom: 12px !important;
+	height: 500px;
+	margin-top: 20px !important;
+	margin-left: 24.5px !important;
+
+}
+.article img {
+	margin-left: -4px;
+}
+.well {
+	
+	margin-left: 0px !important;
+	
+}
+
+
+}
 
 
 
