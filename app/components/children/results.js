@@ -58,7 +58,7 @@ class Results extends Component {
 
                         if ((search.date) && (search.image)){
                             return (
-                                <div className="article" id={i} key={i}>
+                                <div className="article " id={i} key={i}>
                                 <img src={"https://static01.nyt.com/" + search.image}></img>
                                 <a target="_blank" href={search.url}><h5>{search.headline}</h5></a>
                                 <p id="snippet">{search.snippet}</p> 
