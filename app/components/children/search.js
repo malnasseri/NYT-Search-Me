@@ -111,7 +111,8 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div >
+
                     <div className="panel panel-default search-panel">
                         <div className="panel-heading text-center"></div>
                         <div className="panel-body">
