@@ -390,7 +390,7 @@ fieldset {
 .list-group {
 	/*width: 300px;*/
 	
-	margin-right: 10px;
+	margin-right: 25px;
 	margin-top: 2px;
 }
 
@@ -419,11 +419,11 @@ margin-bottom: 50px !important;
 @media only screen and (min-width : 667px) and (max-width: 767px){
 
 .list-group-item {
-	margin-left: 135px;
+	/*margin-left: 135px;*/
 }
 .list-group {
 	/*width: 550px;*/
-	margin-left: 15px;
+	/*margin-left: 15px;*/
 	
 }
 #topic {
