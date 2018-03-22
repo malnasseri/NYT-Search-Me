@@ -498,9 +498,10 @@ margin-bottom: 50px !important;
 }
 @media only screen and (min-width : 768px) and (max-width: 1023px){
 .search-panel {
-
+position: relative;
 	float: none !important;
-	width: 100% !important;
+	width: 700px !important;
+	margin-left: 33px;
 }
 fieldset {
 	width: 100% !important;
@@ -509,11 +510,11 @@ fieldset {
 	margin-left: 18px;
 }
 .search-panel .form-control {
-	width: 700px;
+	width: 630px;
 
 }
 #submit {
-	width: 700px;
+	width: 630px;
 	margin-left: 30px !important;
 }
 .articles-panel {
@@ -526,7 +527,7 @@ fieldset {
 	margin-bottom: 12px !important;
 	height: 500px;
 	margin-top: 20px !important;
-	margin-left: 20px !important;
+	margin-left: 24.5px !important;
 }
 .well {
 	width: 740px;
