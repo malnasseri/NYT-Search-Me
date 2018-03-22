@@ -1,10 +1,5 @@
 # NYT-React-Search
-
-### Purposes
-    To creat a SPA (Single-Page-App) with MERN (Mongo, Express.js, React.js, Node.js)Stack.
-
-### How this app works
-    This app allows users to search their interest in news from NYT API, save news, leave comments on each news and delete saved news and comments.
+The app allows users to search for articles in a specific time using start year and end year filters. Once users have searched the New York Times API, They will be able to click on the article title to go to the original source, Or save the article for later viewing. Once they have saved an article, they can view all of the saved articles in one place, and then add notes to articles or delete the ones that they do not want.
 
 ### Technologies
 * HTML
@@ -27,20 +22,3 @@
 * body-parser (Middleware)
 * dotenv (hide credential information from public)
 
-### To use this app
-
-**Please click to start**
-[Heroku app](https://warm-badlands-47467.herokuapp.com/)
-
-
- ***Let's take a look at NYT-React-Search***
- * The first page of the application allows users to search news (in this case we use New York Time API)
-![Application Screenshot](./img/SS1.png)
-
-
-* Once the data come back from NYT API then the application renders the results and allows users to save interesting news to read later. Users can specify start and end year.
-![Application Screenshot](./img/SS2.png) 
-
-
-* Users can go to "Saved News" to add notes and delete news or notes.
-![Application Screenshot](./img/SS3.png) 
