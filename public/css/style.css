@@ -420,10 +420,11 @@ margin-bottom: 50px !important;
 
 .list-group-item {
 	/*margin-left: 135px;*/
+	margin-left: 25px;
 }
 .list-group {
 	/*width: 550px;*/
-	margin-left: 25px;
+	
 	
 }
 #topic {
@@ -537,7 +538,7 @@ fieldset {
 }
 .list-group {
 	
-	margin-right: 45px;
+	margin-right: 37px;
 }
 .well h5 {
 	    padding-right: 15px;
