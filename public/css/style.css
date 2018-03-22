@@ -574,10 +574,13 @@ fieldset {
 }
 .well {
 	
-	margin-left: 0px !important;
+	margin-left: 30px !important;
 	
 }
-
+.list-group-item {
+	
+	margin-right: 5px;
+}
 
 }
 
