@@ -421,18 +421,38 @@ margin-bottom: 50px !important;
 
 .list-group {
 	width: 550px;
-	margin-right: 10px;
+	margin-left: 15px;
 	
+}
+#topic {
+	margin-left: 35px;
+}
+#startYearText , #endYearText { 
+	margin-left: 25px !important; 
+
+}
+#startYear , #endYear{
+	margin-left: 20px;
+}
+#topicText {
+	margin-left: 25px !important;
 }
 .img {
 	width: 250px !important;
 }
-.search-panel .form-control {
+.search-panel {
+	margin-left:35px;
 	width: 600px;
+	position: relative;
+}
+ .form-control {
+	width: 500px !important;
+	margin-left: 15px;
+
 }
 #submit {
-	width: 600px;
-	margin-left: 30px !important;
+	width: 500px;
+	margin-left: 50px !important;
 }
 .well {
 	width: 600px;
@@ -442,11 +462,13 @@ margin-bottom: 50px !important;
 }
 .article {
 	width: 600px;
+
 	float: none;
 	margin: 0 auto !important;
 	margin-bottom: 12px !important;
 	min-height: none;
 	margin-top:  15px !important;
+	margin-left: -133px !important;
 
 }
 .articles-panel {
