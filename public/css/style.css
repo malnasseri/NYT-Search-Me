@@ -419,7 +419,7 @@ margin-bottom: 50px !important;
 @media only screen and (min-width : 667px) and (max-width: 767px){
 
 .list-group-item {
-	margin-left: 35px;
+	margin-left: 60px;
 }
 .list-group {
 	width: 550px;
