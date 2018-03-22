@@ -585,7 +585,17 @@ fieldset {
 }
 
 
+@media only screen and (min-width : 1280px){ 
 
+.well {
+	
+	margin-left: 0px !important;
+	
+}
+
+
+
+}
 
 
 
